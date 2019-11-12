@@ -1,0 +1,23 @@
+.user-list__basket a {
+  &:before {
+    position: absolute;
+    @include png-sprite($icon-cart);
+    content: "";
+    left: 25px;
+  }
+
+  &:hover:before {
+    @include png-sprite($icon-cart-hover);
+  }
+
+  &:hover:active {
+    opacity: 0.6;
+  }
+}
+@media (min-width: 1150px){
+  .user-list__basket {
+    & a {
+      padding: 35px 0px 34px 86px;
+    }
+  }
+}
