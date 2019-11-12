@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mishka</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="s">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mishka</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="stylesheet" href="s">
 </head>
 <body>
 <header class="header">
-    <section class="header__wrap">
-        <div class="container">
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="#">Каталог товаров</a></li>
-                    <li><a href="#">Вязание на заказ</a></li>
-                    <li><a class="header__logo" href="/"></a></li>
-                    <li><a class="header__search search" href="#"></a></li>
-                    <li><a class="header__cart" href="#">Корзина: <span>пока пуста</span></a></li>
-                </ul>
-            </nav>
-            <nav class="header__nav-info">
-                <ul>
-                    <li>Новые поступления</li>
-                    <li>Распродажа</li>
-                    <li>Бесплатная доставка по России</li>
-                </ul>
-            </nav>
-        </div>
-    </section>
+	<div class="header__wrap">
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+
+			<button class="main-nav__toggle" type="button">
+				<span class="visually-hidden">Открыть меню</span>
+			</button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list site-list">
+					<div class="site-list__positioner">
+						<li class="site-list__item site-list__item--active">
+							<a href="#">Каталог товаров</a>
+						</li>
+						<li class="site-list__item">
+							<a href="#">Вязание на заказ</a>
+						</li>
+					</div>
+
+				</ul>
+				<a class="header__logo" href="/"></a>
+				<ul class="main-nav__list site-user">
+					<li class="user-list__item user-list__search">
+						<a href="#">Поиск по сайту</a>
+					</li>
+					<li class="user-list__item user-list__basket">
+						<a href="#">Корзина: <span>пока пуста</span></a>
+					</li>
+					<div class="site-list__item--simple">
+						<div class="site-list__item--simple-wrap">
+							<li class="user-list__item">
+								<a href="#">Новые поступления</a>
+							</li>
+							<li class="user-list__item">
+								<a href="#">Распродажа</a>
+							</li>
+						</div>
+						<li class="user-list__item">
+							<a href="#">Бесплатная доставка по России</a>
+						</li>
+					</div>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<script src="js/js.js"></script>
 </header>
 </body>
 </html>
