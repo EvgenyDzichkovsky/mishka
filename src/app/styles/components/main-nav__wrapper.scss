@@ -1,0 +1,29 @@
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.main-nav__wrapper a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+@media (min-width: 768px){
+  .main-nav__wrapper {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1150px){
+  .main-nav__wrapper {
+    width: 1050px;
+  }
+}
