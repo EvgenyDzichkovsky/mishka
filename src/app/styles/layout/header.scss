@@ -172,7 +172,14 @@ header {
   &:hover:active {
     opacity: 0.6;
   }
+}
+.user-list__search a:hover:before {
+  @include png-sprite($icon-search-hover);
 
+}
+
+.user-list__search a:hover:active {
+  opacity: 0.6;
 }
 
 @media (min-width: 768px) {
@@ -351,14 +358,7 @@ header {
     padding-right: 0;
   }
 
-  .user-list__search a:hover:before {
-    @include png-sprite($icon-search-hover);
 
-  }
-
-  .user-list__search a:hover:active {
-    opacity: 0.6;
-  }
 }
 
 @media (max-width: 767px) {
