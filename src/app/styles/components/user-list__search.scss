@@ -1,0 +1,37 @@
+.user-list__search a {
+  &:before {
+    position: absolute;
+    @include png-sprite($icon-search);
+    content: "";
+    left: 30px;
+  }
+
+}
+.user-list__search a:hover:before {
+  @include png-sprite($icon-search-hover);
+}
+.user-list__search a:hover:active {
+  opacity: 0.6;
+}
+@media (min-width: 768px){
+  .user-list__search {
+    & a {
+      font-size: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 58px;
+      border-left: 1px solid #e7e7e7;
+      border-right: 1px solid #e7e7e7;
+    }
+  }
+}
+@media (min-width: 1150px){
+  .user-list__search {
+    & a {
+      padding-bottom: 53px;
+    }
+    & a:before {
+      top: 33px;
+    }
+  }
+}
