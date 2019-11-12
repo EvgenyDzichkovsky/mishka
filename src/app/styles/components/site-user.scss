@@ -1,0 +1,30 @@
+
+.site-user a {
+  font-family: "OpenSansBold", sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 30px 15px 30px 75px;
+  border-top: 1px solid #e7e7e7;
+}
+@media (min-width: 768px){
+  .site-user a {
+    padding-right: 0px;
+    border: none;
+    position: relative;
+    padding-bottom: 39px;
+    padding-top: 35px;
+  }
+
+}
+@media (min-width: 1150px){
+  .site-user {
+    & a {
+
+    }
+
+    width: 350px;
+    justify-content: space-between;
+  }
+}
