@@ -4,7 +4,7 @@
   min-height: 748px;
   width: 100%;
 
-  &:after{
+  &:after {
     position: absolute;
     @include png-sprite($icon-hero-bottom);
     content: "";
@@ -13,7 +13,6 @@
     background-repeat: repeat-x;
     background-position-x: 50%;
   }
-
 
   & h1 {
     margin: 0;
@@ -35,9 +34,7 @@
     justify-content: space-between;
     background: url("../images/hero.jpg") no-repeat;
     background-position: center;
-
   }
-
 
   &__list {
     position: relative;
@@ -46,8 +43,6 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-
-
   }
 
   &__items {
@@ -60,21 +55,21 @@
 
     &--left-card {
       background: #63d1bb;
-      &:hover{
+
+      &:hover {
         transform: translateY(-10px);
         transition: 0.3s;
       }
-
     }
 
     &--right-card {
       background: #56c3b2;
-      &:hover{
 
-        transform: translateY(-10px);
+      &:hover {
+
+        transform: translateY(-9px);
         transition: 0.2s;
       }
-
     }
   }
 
@@ -90,8 +85,9 @@
     padding-left: 37px;
     padding-right: 57%;
     line-height: 30px;
-    &--interior{
-      &:after{
+
+    &--interior {
+      &:after {
         position: absolute;
         @include png-sprite($icon-interrier);
         content: "";
@@ -99,8 +95,9 @@
         opacity: 0.5;
       }
     }
-    &--toy{
-      &:after{
+
+    &--toy {
+      &:after {
         position: absolute;
         @include png-sprite($icon-toy);
         content: "";
@@ -108,15 +105,18 @@
         opacity: 0.5;
       }
     }
-    &:hover:after{
+
+    &:hover:after {
       opacity: 1;
       transition: 0.2s;
     }
-    &:active:after{
+
+    &:active:after {
       opacity: 0.3;
       transition: 0s;
     }
-    &:active{
+
+    &:active {
       color: rgba(255, 255, 255, 0.3);
     }
   }
