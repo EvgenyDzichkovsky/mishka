@@ -1,0 +1,123 @@
+.hero {
+  position: relative;
+  background: #f9f9f9;
+  min-height: 748px;
+  width: 100%;
+
+  &:after{
+    position: absolute;
+    @include png-sprite($icon-hero-bottom);
+    content: "";
+    width: 100%;
+    bottom: -10px;
+    background-repeat: repeat-x;
+    background-position-x: 50%;
+  }
+
+
+  & h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 53px;
+    font-family: "OpenSansBold", sans-serif;
+    text-align: center;
+    padding-top: 164px;
+    line-height: 57px;
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 1050px;
+    min-height: 748px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../images/hero.jpg") no-repeat;
+    background-position: center;
+
+  }
+
+
+  &__list {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+
+  }
+
+  &__items {
+    position: relative;
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    min-height: 119px;
+
+    &--left-card {
+      background: #63d1bb;
+      &:hover{
+        transform: translateY(-10px);
+        transition: 0.3s;
+      }
+
+    }
+
+    &--right-card {
+      background: #56c3b2;
+      &:hover{
+
+        transform: translateY(-10px);
+        transition: 0.2s;
+      }
+
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    font-family: "OpenSansBold", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 35px;
+    padding-bottom: 34px;
+    padding-left: 37px;
+    padding-right: 57%;
+    line-height: 30px;
+    &--interior{
+      &:after{
+        position: absolute;
+        @include png-sprite($icon-interrier);
+        content: "";
+        right: 36px;
+        opacity: 0.5;
+      }
+    }
+    &--toy{
+      &:after{
+        position: absolute;
+        @include png-sprite($icon-toy);
+        content: "";
+        right: 36px;
+        opacity: 0.5;
+      }
+    }
+    &:hover:after{
+      opacity: 1;
+      transition: 0.2s;
+    }
+    &:active:after{
+      opacity: 0.3;
+      transition: 0s;
+    }
+    &:active{
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
