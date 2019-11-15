@@ -1,12 +1,350 @@
 .main-nav {
   position: relative;
-  min-height: 50px;
+  min-height: 88px;
   width: 100%;
   margin: 0 auto;
-}
 
-@media (min-width: 768px) {
-  .main-nav {
-    min-height: 70px;
+
+
+  &__link{
+    font-family: "OpenSansBold", sans-serif;
+    color: #000;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 35px 0 35px 0;
+
+    &:hover{
+      opacity: 0.6;
+    }
+    &:active{
+      opacity: 0.3;
+    }
+  }
+
+  &__link--logo{
+    padding: 0;
+    display: inline-block;
+    @include png-sprite($icon-mishka-phone);
+    content: "";
+
+    &:hover{
+      opacity: 0.6;
+    }
+    &:active{
+      opacity: 0.3;
+    }
+    order: -1;
+    align-self: center;
+
+  }
+  &__link--search{
+    position: relative;
+    font-size: 0px;
+    border-right: 1px solid #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    padding: 43px 41px 45px 41px;
+    &:before{
+      position: absolute;
+      @include png-sprite($icon-search);
+      content: "";
+      top: 33px;
+      left: 25px;
+
+    }
+    &:hover:before{
+      position: absolute;
+      @include png-sprite($icon-search-hover);
+      content: "";
+      top: 33px;
+      left: 30px;
+    }
+    &:active{
+      opacity: 0.3;
+    }
+
+  }
+  &__link--basket{
+    position: relative;
+    &:before{
+      position: absolute;
+      @include png-sprite($icon-cart);
+      content: "";
+      top: 33px;
+      left: 25px;
+    }
+    &:hover:before{
+      position: absolute;
+      @include png-sprite($icon-cart-hover);
+      content: "";
+      top: 33px;
+      left: 30px;
+    }
+    &:active{
+      opacity: 0.3;
+    }
+  }
+  &__link--fs{
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 15px;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    z-index: 2;
+    display: block;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+
+  &__link--fs{
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 15px;
+  }
+  &--closed &__toggle::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 21px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    background: #000;
+    box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+  }
+
+  &--closed &__toggle:active::before {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3),
+    0 16px 0 0 rgba(255, 255, 255, 0.3);
+  }
+
+  &--opened &__toggle {
+    top: 6%;
+    right: 30px;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0px;
+      width: 21px;
+      height: 2px;
+      background: #000;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  &__nav-bottom{
+    display: none;
+  }
+  &__link--search{
+    font-size: 17px;
+    border: none;
+    padding-right: 0;
+    padding-left: 0;
+
+
+  }
+  &__link--show-tablet{
+    display: none;
+  }
+  &__link--hide-tablet{
+    display: flex;
+    flex-direction: column;
+    & a:first-child{
+      border-top: 1px solid #e7e7e7;
+    }
+  }
+  &__wrap--basket{
+    display: flex;
+    flex-direction: column;
+  }
+  &__link--mobile{
+    padding-left: 23.75%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+
+  @media (min-width: 768px) {
+    &__link--logo{
+      padding: 0;
+      display: inline-block;
+      @include png-sprite($icon-mishka-tablet);
+      content: "";
+    }
+
+    &__toggle {
+      display: none;
+    }
+    &__list{
+      height: 88px;
+    }
+    &__link--hide-tablet{
+      display: none;
+    }
+    &__link--search{
+      position: relative;
+      font-size: 0px;
+      border-right: 1px solid #e7e7e7;
+      border-left: 1px solid #e7e7e7;
+      padding: 43px 41px 45px 41px;
+      &:before{
+        position: absolute;
+        @include png-sprite($icon-search);
+        content: "";
+        top:33px;
+        left: 30px;
+      }
+    }
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      padding: 0;
+    }
+
+
+    &__link--show-tablet{
+      display: flex;
+      & a{
+        font-size: 15px;
+        padding-right: 35px;
+      }
+    }
+    &__link--basket{
+      padding-left: 83px;
+      &:before{
+        position: absolute;
+        @include png-sprite($icon-cart);
+        content: "";
+        top: 33px;
+        left: 30px;
+      }
+    }
+    &__wrap--basket{
+      display: flex;
+      flex-direction: row;
+
+    }
+    &__nav-bottom{
+      display: block;
+    }
+    &__link--mobile{
+      border-bottom:  none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+  @media (min-width: 1150px) {
+    & {
+      height: 88px;
+
+    }
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__link{
+      border-right: 1px solid #e7e7e7;
+    }
+    &__link--borderless{
+      border-right: none;
+    }
+    &__link--mobile{
+      border-bottom:  none;
+    }
+    &__link--show-tablet{
+      display: none;
+    }
+    &__link--logo{
+      padding: 0;
+      display: inline-block;
+      @include png-sprite($icon-mishka-desktop);
+      content: "";
+    }
+    &__link--basket{
+      padding-left: 83px;
+      &:before{
+        position: absolute;
+        @include png-sprite($icon-cart);
+        content: "";
+        top: 33px;
+        left: 30px;
+      }
+    }
+    &__wrap--basket{
+      display: flex;
+      flex-direction: row;
+
+    }
+    &__nav-bottom{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+    }
+    &__link--pr{
+      padding-right: 35px;
+      padding-left: 0;
+    }
+    &__link--pl{
+      padding-left: 35px;
+    }
+
+    &__nav-bottom--wrap{
+      display: flex;
+      & a{
+        font-size: 15px;
+      }
+    }
+
+    &__link--hide-tablet{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      order: -1;
+      & a{
+        border: none;
+      }
+    }
   }
 }

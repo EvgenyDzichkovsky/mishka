@@ -5,53 +5,53 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mishka</title>
 	<link rel="stylesheet" href="styles/style.css">
-	<link rel="stylesheet" href="s">
 </head>
 <body>
 <header class="header">
+
 	<div class="header__wrap">
-		<nav class="main-nav main-nav--closed main-nav--nojs">
+		<nav class="main-nav main-nav--opened main-nav--nojs">
 			<button class="main-nav__toggle" type="button">
 				<span class="visually-hidden">Открыть меню</span>
 			</button>
-			<div class="main-nav__wrapper">
-				<ul class="main-nav__list site-list">
-					<div class="site-list__positioner">
-						<li class="site-list__item site-list__item--active">
-							<a href="#">Каталог товаров</a>
-						</li>
-						<li class="site-list__item">
-							<a href="#">Вязание на заказ</a>
-						</li>
+			<div class="main-nav__list">
+				<div class="main-nav__link--hide-tablet">
+					<a href="#" class="main-nav__link  main-nav__link--pr main-nav__link--mobile">
+						Каталог товаров</a>
+					<a href="#" class="main-nav__link main-nav__link--pl main-nav__link--mobile main-nav__link--borderless">
+						Вязание на заказ</a>
+				</div>
+				<a href="#" class="main-nav__link main-nav__link--logo main-nav__link--borderless"></a>
+				<div class="main-nav__wrap--basket">
+					<a href="#" class="main-nav__link main-nav__link--search main-nav__link--mobile">
+						Поиск по сайту</a>
+					<a href="#" class="main-nav__link main-nav__link--basket main-nav__link--mobile main-nav__link--borderless">
+						Корзина: <span>пока пуста</span></a>
+				</div>
+				<div class=" main-nav__link--show-tablet">
+					<a href="#" class="main-nav__link main-nav__link--borderless">
+						Каталог товаров</a>
+					<a href="#" class="main-nav__link main-nav__link--borderless">
+						Вязание на заказ</a>
+				</div>
+				<div class="main-nav__nav-bottom">
+					<div class="main-nav__nav-bottom--wrap">
+						<a href="#"
+						   class="main-nav__link main-nav__link--hide-tablet main-nav__link--borderless main-nav__link--pr">
+							Новые поступления</a>
+						<a href="#" class="main-nav__link main-nav__link--hide-tablet main-nav__link--borderless">
+							Распродажа</a>
 					</div>
-
-				</ul>
-				<a class="header__logo" href="/"></a>
-				<ul class="main-nav__list site-user">
-					<li class="user-list__item user-list__search">
-						<a href="#">Поиск по сайту</a>
-					</li>
-					<li class="user-list__item user-list__basket">
-						<a href="#">Корзина: <span>пока пуста</span></a>
-					</li>
-					<div class="site-list__item--simple">
-						<div class="site-list__item--simple-wrap">
-							<li class="user-list__item">
-								<a href="#">Новые поступления</a>
-							</li>
-							<li class="user-list__item">
-								<a href="#">Распродажа</a>
-							</li>
-						</div>
-						<li class="user-list__item">
-							<a href="#">Бесплатная доставка по России</a>
-						</li>
-					</div>
-				</ul>
+					<a href="#" class="main-nav__link main-nav__link--borderless main-nav__link--fs">
+						Бесплатная доставка по России</a>
+				</div>
 			</div>
+
+
 		</nav>
 	</div>
 	<script src="js/js.js"></script>
+
 </header>
 </body>
 </html>
