@@ -1,0 +1,131 @@
+.product {
+  position: relative;
+  width: 1050px;
+  height: 730px;
+  margin: 0 auto;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+
+
+  &:after{
+    position: absolute;
+    @include png-sprite($icon-product-bottom);
+    content: "";
+    width: inherit;
+    bottom: 0;
+    background-repeat: repeat-x;
+
+
+  }
+
+  &__top-week {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+
+    & span {
+      font-family: "OpenSansBold", sans-serif;
+      font-size: 15px;
+      color: #63d1bb;
+      text-transform: uppercase;
+      text-align: center;
+      align-self: center;
+      margin-top: 55px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: row;
+    height: 636px;
+  }
+
+  &__offer {
+    width: 350px;
+
+    & h1 {
+      padding: 0;
+      margin: 0;
+      margin-top: 39px;
+      font-family: "OpenSansBold", sans-serif;
+      font-size: 53px;
+      min-width: 530px;
+    }
+
+
+    z-index: 2;
+  }
+
+  &__description {
+    font-family: "OpenSansRegular", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    width: 292px;
+    margin-top: 50px;
+    margin-bottom: 67px;
+    line-height: 30px;
+  }
+
+  &__advantages {
+    display: flex;
+    flex-direction: column;
+
+    &-item:first-child{
+      padding-top: 0;
+    }
+    &-item {
+      display: flex;
+      flex-direction: row;
+      width: 292px;
+      border-bottom: 1px solid #e7e7e7;
+      padding: 12px 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__price {
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    width: 292px;
+    text-align: center;
+    margin-top: 112px;
+    margin-bottom: 34px;
+  }
+
+  &__advantages-name {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 15px;
+  }
+
+  &__advantages-value {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 15px;
+  }
+  &__form{
+    width: 292px;
+    text-align: center;
+  }
+  &__btn{
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    width: 288px;
+    height: 48px;
+    background: #ffffff;
+    border: 2px solid #000000;
+
+  }
+  &__img {
+    width: 525px;
+    z-index: 1;
+  }
+
+}
+
