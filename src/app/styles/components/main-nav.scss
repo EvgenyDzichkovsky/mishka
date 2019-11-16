@@ -3,42 +3,50 @@
   min-height: 88px;
   width: 100%;
   margin: 0 auto;
-  &__link{
+
+  &__link {
     font-family: "OpenSansBold", sans-serif;
     color: #000;
     font-size: 17px;
     text-decoration: none;
     padding: 35px 0 35px 0;
-    &:hover{
+
+    &:hover {
       opacity: 0.6;
     }
-    &:active{
+
+    &:active {
       opacity: 0.3;
     }
   }
-  &__link--logo{
+
+  &__link--logo {
     padding: 0;
     display: inline-block;
     @include png-sprite($icon-mishka-phone);
     content: "";
 
-    &:hover{
+    &:hover {
       opacity: 0.6;
     }
-    &:active{
+
+    &:active {
       opacity: 0.3;
     }
+
     order: -1;
     align-self: center;
 
   }
-  &__link--search{
+
+  &__link--search {
     position: relative;
-    font-size: 0px;
+    font-size: 0;
     border-right: 1px solid #e7e7e7;
     border-left: 1px solid #e7e7e7;
     padding: 43px 41px 45px 41px;
-    &:before{
+
+    &:before {
       position: absolute;
       @include png-sprite($icon-search);
       content: "";
@@ -46,39 +54,46 @@
       left: 25px;
 
     }
-    &:hover:before{
+
+    &:hover:before {
       position: absolute;
       @include png-sprite($icon-search-hover);
       content: "";
       top: 33px;
       left: 30px;
     }
-    &:active{
+
+    &:active {
       opacity: 0.3;
     }
 
   }
-  &__link--basket{
+
+  &__link--basket {
     position: relative;
-    &:before{
+
+    &:before {
       position: absolute;
       @include png-sprite($icon-cart);
       content: "";
       top: 33px;
       left: 25px;
     }
-    &:hover:before{
+
+    &:hover:before {
       position: absolute;
       @include png-sprite($icon-cart-hover);
       content: "";
       top: 33px;
       left: 30px;
     }
-    &:active{
+
+    &:active {
       opacity: 0.3;
     }
   }
-  &__link--fs{
+
+  &__link--fs {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 15px;
   }
@@ -96,16 +111,17 @@
     background: transparent;
   }
 
-  &__link--fs{
+  &__link--fs {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 15px;
   }
 
 
-  &--closed &__link--mobile{
+  &--closed &__link--mobile {
     display: none;
   }
-  &--closed &__link--mobile{
+
+  &--closed &__link--mobile {
     display: none;
   }
 
@@ -128,7 +144,6 @@
   }
 
 
-
   &--opened &__toggle {
     top: 6%;
     right: 30px;
@@ -138,7 +153,7 @@
       content: "";
       position: absolute;
       top: 8px;
-      left: 0px;
+      left: 0;
       width: 21px;
       height: 2px;
       background: #000;
@@ -166,10 +181,12 @@
     flex-direction: column;
     padding-top: 20px;
   }
-  &__nav-bottom{
+
+  &__nav-bottom {
     display: none;
   }
-  &__link--search{
+
+  &__link--search {
     font-size: 17px;
     border: none;
     padding-right: 0;
@@ -177,21 +194,22 @@
 
 
   }
-  &__link--show-tablet{
+
+  &__link--show-tablet {
     display: none;
   }
+
   &__link--hide-tablet{
     display: flex;
     flex-direction: column;
-    & a:first-child{
-      border-top: 1px solid #e7e7e7;
-    }
   }
-  &__wrap--basket{
+
+  &__wrap--basket {
     display: flex;
     flex-direction: column;
   }
-  &__link--mobile{
+
+  &__link--mobile {
     padding-left: 23.75%;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -199,7 +217,15 @@
   }
 
   @media (min-width: 768px) {
-    &__link--logo{
+    &--closed &__link--mobile {
+      display: flex;
+    }
+
+    &--closed &__link--mobile {
+      display: flex;
+    }
+
+    &__link--logo {
       padding: 0;
       display: inline-block;
       @include png-sprite($icon-mishka-tablet);
@@ -209,27 +235,28 @@
     &__toggle {
       display: none;
     }
-    &__list{
+    &__list {
       height: 88px;
     }
-    &__link--hide-tablet{
+    &__link--hide-tablet {
       display: none;
     }
-    &__link--search{
+    &__link--search {
       position: relative;
-      font-size: 0px;
+      font-size: 0;
       border-right: 1px solid #e7e7e7;
       border-left: 1px solid #e7e7e7;
       padding: 43px 41px 45px 41px;
-      &:before{
+
+      &:before {
         position: absolute;
         @include png-sprite($icon-search);
         content: "";
-        top:33px;
+        top: 33px;
         left: 30px;
       }
     }
-    &__list{
+    &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -239,16 +266,18 @@
     }
 
 
-    &__link--show-tablet{
+    &__link--show-tablet {
       display: flex;
-      & a{
+      z-index: 3;
+      & a {
         font-size: 15px;
         padding-right: 35px;
       }
     }
-    &__link--basket{
+    &__link--basket {
       padding-left: 83px;
-      &:before{
+
+      &:before {
         position: absolute;
         @include png-sprite($icon-cart);
         content: "";
@@ -256,33 +285,34 @@
         left: 30px;
       }
     }
-    &__wrap--basket{
+    &__wrap--basket {
       display: flex;
       flex-direction: row;
 
     }
-    &__nav-bottom{
+    &__nav-bottom {
       display: block;
+      z-index: 2;
     }
-    &__link--mobile{
-      border-bottom:  none;
+    &__link--mobile {
+      border-bottom: none;
     }
   }
 
 
-
-
-
-
-
-
-
   @media (min-width: 1150px) {
+    &--closed &__link--mobile {
+      display: flex;
+    }
+
+    &--closed &__link--mobile {
+      display: flex;
+    }
     & {
       height: 88px;
 
     }
-    &__list{
+    &__list {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -290,27 +320,28 @@
       padding: 0;
     }
 
-    &__link{
+    &__link {
       border-right: 1px solid #e7e7e7;
     }
-    &__link--borderless{
+    &__link--borderless {
       border-right: none;
     }
-    &__link--mobile{
-      border-bottom:  none;
+    &__link--mobile {
+      border-bottom: none;
     }
-    &__link--show-tablet{
+    &__link--show-tablet {
       display: none;
     }
-    &__link--logo{
+    &__link--logo {
       padding: 0;
       display: inline-block;
       @include png-sprite($icon-mishka-desktop);
       content: "";
     }
-    &__link--basket{
+    &__link--basket {
       padding-left: 83px;
-      &:before{
+
+      &:before {
         position: absolute;
         @include png-sprite($icon-cart);
         content: "";
@@ -318,38 +349,40 @@
         left: 30px;
       }
     }
-    &__wrap--basket{
+    &__wrap--basket {
       display: flex;
       flex-direction: row;
 
     }
-    &__nav-bottom{
+    &__nav-bottom {
       display: flex;
       width: 100%;
       justify-content: space-between;
+      z-index: 2;
 
     }
-    &__link--pr{
+    &__link--pr {
       padding-right: 35px;
       padding-left: 0;
     }
-    &__link--pl{
+    &__link--pl {
       padding-left: 35px;
     }
 
-    &__nav-bottom--wrap{
+    &__nav-bottom--wrap {
       display: flex;
-      & a{
+
+      & a {
         font-size: 15px;
       }
     }
 
-    &__link--hide-tablet{
+    &__link--hide-tablet {
       display: flex;
       align-items: center;
       flex-direction: row;
       order: -1;
-      & a{
+      & a {
         border: none;
       }
     }

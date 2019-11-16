@@ -8,12 +8,12 @@
 //@import "mixins/svg-sprite";
 @import "fonts/fonts";
 @import "libraries/normalize";
-
+@import "layout/variables";
 
 @import "layout/header";
 @import "components/main-nav";
 @import "components/hero";
-
+@import "components/product-detail__wrap";
 
 
 @import "layout/visually-hidden";
