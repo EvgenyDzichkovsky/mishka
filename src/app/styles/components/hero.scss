@@ -12,13 +12,13 @@
 
 
 
-    @media (max-width: $tablet-width)  {
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width)  {
       background-size: cover;
       min-height: 748px;
     }
     @media (max-width: $mobile-width){
       background-size: 575px auto;
-      background-position-y: 0px;
+      background-position-y: 0;
       min-height: 558px;
     }
   }
@@ -61,20 +61,19 @@
     padding-top: 164px;
     line-height: 57px;
 
-    @media (max-width: $tablet-width)  {
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
       font-size: 43px;
       width: 100%;
       padding-top: 164px;
 
     }
-    @media (max-width: $mobile-width){
+    @media (max-width: $mobile-width) {
       font-size: 27px;
       width: 260px;
       align-self: center;
       padding-top: 75px;
       line-height: 30px;
     }
-
   }
 
 
@@ -82,18 +81,21 @@
   &__list {
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    width: 1050px;
     list-style: none;
     display: flex;
     flex-direction: row;
 
 
-    @media (max-width: $tablet-width) {
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
         display: flex;
+      width: 668px;
         flex-direction: row;
     }
     @media (max-width: $mobile-width){
       display: flex;
+      width: 100%;
       flex-direction: column;
     }
 
@@ -114,7 +116,7 @@
         transform: translateY(-10px);
         transition: 0.3s;
 
-        @media (max-width: $tablet-width) {
+        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
           transform: translateY(-10px);
           transition: 0.3s;
         }
@@ -132,7 +134,7 @@
         transform: translateY(-9px);
         transition: 0.3s;
 
-        @media (max-width: $tablet-width) {
+        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
           transform: translateY(-10px);
           transition: 0.3s;
         }
@@ -144,7 +146,7 @@
 
     }
 
-    @media (max-width: $tablet-width) {
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
       width: 50%;
     }
     @media (max-width: $mobile-width){
@@ -162,7 +164,7 @@
     padding-top: 35px;
     padding-bottom: 34px;
     padding-left: 37px;
-    padding-right: 57%;
+    padding-right: 30%;
     line-height: 30px;
 
     &--interior {

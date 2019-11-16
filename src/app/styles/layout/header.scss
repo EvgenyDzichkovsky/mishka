@@ -8,14 +8,19 @@
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width)  {
 
+    }
+    @media (max-width: $mobile-width){
+
+    }
   }
 
   @media (min-width: 768px) {
     &__wrap {
       width: 668px;
       margin: 0 auto;
-      padding: 0 50px 0 50px;
+
       border-bottom: 1px solid #e7e7e7;
     }
   }
@@ -23,7 +28,7 @@
   @media (min-width: 1150px) {
     &__wrap {
       width: 1050px;
-      padding: 0 50px 0 50px;
+
       border-bottom: 1px solid #e7e7e7;
     }
   }
