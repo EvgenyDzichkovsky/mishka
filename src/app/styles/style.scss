@@ -9,11 +9,13 @@
 @import "fonts/fonts";
 @import "libraries/normalize";
 @import "layout/variables";
+@import "layout/common";
 
 @import "layout/header";
+@import "components/navigation";
 @import "components/main-nav";
 @import "components/hero";
-@import "components/product-detail__wrap";
+@import "components/product";
 
 
 @import "layout/visually-hidden";

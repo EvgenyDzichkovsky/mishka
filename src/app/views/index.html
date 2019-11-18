@@ -10,57 +10,43 @@
 </head>
 <body>
 <header class="header">
-
-	<div class="header__wrap">
-		<nav class="main-nav main-nav--closed main-nav--nojs">
-			<button class="main-nav__toggle" type="button">
-				<span class="visually-hidden">Открыть меню</span>
-			</button>
-			<div class="main-nav__list">
-				<div class="main-nav__link--hide-tablet">
-					<a href="#" class="main-nav__link  main-nav__link--pr main-nav__link--mobile">
-						Каталог товаров</a>
-					<a href="#"
-					   class="main-nav__link main-nav__link--pl main-nav__link--mobile main-nav__link--borderless">
-						Вязание на заказ</a>
+	<nav class="navigation navigation--closed navigation--nojs">
+		<button class="navigation__toggle" type="button">
+			<span class="visually-hidden">Открыть меню</span>
+		</button>
+		<div class="container">
+			<div class="navigation__wrapper">
+				<div class="navigation__group hide-tablet">
+					<a href="#" class="navigation__link navigation__link--mobile navigation__link--pr-35 navigation__link--br">Каталог
+						товаров</a>
+					<a href="#" class="navigation__link navigation__link--mobile navigation__link--pl-35">Вязание на заказ</a>
 				</div>
-				<a href="#" class="main-nav__link main-nav__link--logo main-nav__link--borderless"></a>
-				<div class="main-nav__wrap--basket">
-					<a href="#" class="main-nav__link main-nav__link--search main-nav__link--mobile">
-						Поиск по сайту</a>
-					<a href="#"
-					   class="main-nav__link main-nav__link--basket main-nav__link--mobile main-nav__link--borderless">
-						Корзина: <span>пока пуста</span></a>
-				</div>
-				<div class=" main-nav__link--show-tablet">
-					<a href="#" class="main-nav__link main-nav__link--borderless">
-						Каталог товаров</a>
-					<a href="#" class="main-nav__link main-nav__link--borderless">
-						Вязание на заказ</a>
-				</div>
-				<div class="main-nav__nav-bottom">
-					<div class="main-nav__nav-bottom--wrap">
-						<a href="#"
-						   class="main-nav__link main-nav__link--hide-tablet main-nav__link--borderless main-nav__link--pr">
-							Новые поступления</a>
-						<a href="#" class="main-nav__link main-nav__link--hide-tablet main-nav__link--borderless">
-							Распродажа</a>
-					</div>
-					<a href="#" class="main-nav__link main-nav__link--borderless main-nav__link--fs">
-						Бесплатная доставка по России</a>
+				<a href="#" class="navigation__link navigation__link--logo">Логотип</a>
+				<div class="navigation__group">
+					<a href="#" class="navigation__link navigation__link--mobile navigation__link--search">Поиск по сайту</a>
+					<a href="#" class="navigation__link navigation__link--mobile navigation__link--basket">Корзина: <span>пока пуста</span></a>
 				</div>
 			</div>
-
-
+		</div>
+	</nav>
+	<div class="container">
+		<nav class="sub-navigation">
+			<a href="#" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог товаров</a>
+			<a href="#" class="sub-navigation__link show-tablet">Вязание на заказ</a>
+			<a href="#" class="sub-navigation__link sub-navigation__link--pr-60 hide-tablet">Новые постулпения</a>
+			<a href="#" class="sub-navigation__link hide-tablet">Распродажа</a>
+			<span class="sub-navigation__info">Бесплатная доставка по России</span>
 		</nav>
 	</div>
-	<script src="js/js.js"></script>
-
 </header>
+
 <section class="main">
 	<section class="hero">
+
 		<div class="hero__wrap">
-			<h1>Милые штуки ручной<br>работы для дома</h1>
+			<div class="container">
+				<h1>Милые штуки ручной<br>работы для дома</h1>
+			</div>
 			<ul class="hero__list">
 				<li class="hero__items hero__items--left-card">
 					<a href="#" class="hero__link hero__link--interior">Предметы<br>интерьера</a>
@@ -70,42 +56,44 @@
 				</li>
 			</ul>
 		</div>
+
+	</section>
+	<section class="product product__pb">
+
+		<div class="product__top-week">
+			<span>товар<br>недели</span>
+		</div>
+		<div class="product__detail">
+			<div class="product__offer">
+				<h1>Вязаные корзинки</h1>
+				<p class="product__description">Экологически чистая пряжа, ручная работа.
+					Доступны в шести расцветках и трех размерах.</p>
+				<div class="product__advantages">
+					<div class="product__advantages-item">
+						<div class="product__advantages-name">Цвет:</div>
+						<div class="product__advantages-value">"Тиффани"/серый</div>
+					</div>
+					<div class="product__advantages-item">
+						<div class="product__advantages-name">Диаметр:</div>
+						<div class="product__advantages-value">25 см</div>
+					</div>
+					<div class="product__advantages-item">
+						<div class="product__advantages-name">Высота</div>
+						<div class="product__advantages-value">15 см</div>
+					</div>
+				</div>
+				<p class="product__price">Цена: <span>990 руб.</span></p>
+				<form class="product__form">
+					<input class="product__btn" type="button" value="заказать">
+				</form>
+			</div>
+
+			<div class="product__img">
+				<img src="images/product-img.jpg" alt="Вязаные корзинки">
+			</div>
+		</div>
 	</section>
 </section>
-<section class="product">
-	<div class="product__top-week">
-		<span>товар<br>недели</span>
-	</div>
-	<div class="product__detail">
-		<div class="product__offer">
-			<h1>Вязаные корзинки</h1>
-			<p class="product__description">Экологически чистая пряжа, ручная работа.
-				Доступны в шести расцветках и трех размерах.</p>
-			<div class="product__advantages">
-				<div class="product__advantages-item">
-					<div class="product__advantages-name">Цвет:</div>
-					<div class="product__advantages-value">"Тиффани"/серый</div>
-				</div>
-				<div class="product__advantages-item">
-					<div class="product__advantages-name">Диаметр:</div>
-					<div class="product__advantages-value">25 см</div>
-				</div>
-				<div class="product__advantages-item">
-					<div class="product__advantages-name">Высота</div>
-					<div class="product__advantages-value">15 см</div>
-				</div>
-			</div>
-			<p class="product__price">Цена: <span>990 руб.</span></p>
-			<form class="product__form">
-				<input class="product__btn" type="button" value="заказать">
-			</form>
-		</div>
-
-		<div class="product__img">
-			<img src="images/product-img.jpg" alt="Вязаные корзинки">
-		</div>
-	</div>
-
-</section>
+<script src="js/js.js"></script>
 </body>
 </html>

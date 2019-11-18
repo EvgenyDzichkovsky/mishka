@@ -1,0 +1,348 @@
+.navigation {
+  position: relative;
+  font-size: 0;
+  border-bottom: 1px solid #e7e7e7;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $mobile-width) {
+      flex-direction: column;
+      align-items: end;
+      padding-left: 46px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    padding: 35px 0;
+    text-decoration: none;
+    color: #000000;
+
+    @media (max-width: $mobile-width) {
+      padding: 30px 0;
+    }
+
+    &--logo,
+    &--search {
+      font-size: 0;
+      line-height: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+      &--search {
+        line-height: 17px;
+        font-size: 17px;
+      }
+    }
+
+    &--search,
+    &--basket {
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--logo {
+      padding: 0;
+      align-self: center;
+
+      &:before {
+        display: block;
+        position: relative;
+        @include png-sprite($icon-mishka-desktop);
+        content: "";
+
+        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+          @include png-sprite($icon-mishka-tablet);
+        }
+
+        @media (max-width: $mobile-width) {
+          @include png-sprite($icon-mishka-phone);
+        }
+      }
+
+      @media (max-width: $mobile-width) {
+        padding: 20px;
+        order: -1;
+      }
+    }
+
+    &--search {
+      padding: 43px 35px;
+      border-right: 1px solid #e7e7e7;
+      border-left: 1px solid #e7e7e7;
+
+      &:before {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include png-sprite($icon-search);
+
+        @media (max-width: $mobile-width) {
+          left: -30px;
+        }
+      }
+
+      @media (max-width: $mobile-width) {
+        border: none;
+        font-size: 17px;
+        padding: 30px 0 30px 0;
+      }
+    }
+
+    &--basket {
+      padding-left: 80px;
+
+      &:before {
+        left: 30px;
+        @include png-sprite($icon-cart);
+
+        @media (max-width: $mobile-width) {
+          left: -30px;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      @media (max-width: $mobile-width) {
+        padding-left: 0;
+      }
+    }
+
+    &--pr-35 {
+      padding-right: 35px;
+
+      @media (max-width: $mobile-width) {
+        padding-right: 0;
+      }
+    }
+
+    &--pl-35 {
+      padding-left: 35px;
+
+      @media (max-width: $mobile-width) {
+        padding-left: 0;
+      }
+    }
+
+    &--br {
+      border-right: 1px solid #e7e7e7;
+
+      @media (max-width: $mobile-width) {
+        border-right: none;
+      }
+    }
+  }
+
+  //-------------------------КНОПКА---------------------------------
+
+  &--closed &__link--mobile {
+    display: flex;
+  }
+
+  &--closed &__link--mobile {
+    display: flex;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    &--closed &__link--mobile {
+      display: flex;
+    }
+
+    &--closed &__link--mobile {
+      display: flex;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: $mobile-width) {
+    &__toggle {
+      position: absolute;
+      top: 22px;
+      right: 30px;
+      z-index: 2;
+      display: block;
+      width: 21px;
+      height: 21px;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    &--closed &__toggle::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      width: 21px;
+      height: 2px;
+      transform: translate(-50%, -50%);
+      background: #000;
+      box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+    }
+
+    &--closed &__toggle:active::before {
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3),
+      0 16px 0 0 rgba(255, 255, 255, 0.3);
+    }
+
+    &--opened &__toggle {
+      top: 6%;
+      right: 30px;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 21px;
+        height: 2px;
+        background: #000;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+
+      &:active::before,
+      &:active::after {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    &--closed &__link--mobile {
+      display: none;
+    }
+  }
+  //----------------------------------------------------------
+}
+
+
+.sub-navigation {
+  display: flex;
+
+  &__info {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 15px;
+    padding: 24px 0;
+    margin-left: auto;
+  }
+
+  &__link {
+    font-family: "OpenSansBold", sans-serif;
+    font-size: 15px;
+    padding: 24px 0;
+    line-height: 17px;
+    text-decoration: none;
+    color: #000000;
+  }
+
+  &__link--pr-60 {
+    padding-right: 60px;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      padding-right: 37px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+
+}
+
+// если я эти првила переношу в common то не работает
+.hide-tablet {
+  display: flex;
+
+  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.show-tablet {
+  display: none;
+
+  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
