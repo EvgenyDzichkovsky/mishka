@@ -1,7 +1,7 @@
 .hero {
   &__wrap {
     position: relative;
-    min-height: 748px;
+    min-height: 640px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,7 +23,6 @@
   }
   position: relative;
   background: #f9f9f9;
-  min-height: 748px;
   width: 100%;
 
   &:after {
@@ -57,7 +56,7 @@
     font-size: 53px;
     font-family: "OpenSansBold", sans-serif;
     text-align: center;
-    padding-top: 164px;
+    padding-top: 100px;
     line-height: 57px;
 
     @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
