@@ -8,15 +8,16 @@
 //@import "mixins/svg-sprite";
 @import "fonts/fonts";
 @import "libraries/normalize";
+@import "libraries/slick";
 @import "layout/variables";
 @import "layout/common";
+@import "layout/visually-hidden";
 
 @import "layout/header";
 @import "components/navigation";
 @import "components/hero";
 @import "components/product";
 @import "components/about";
+@import "components/reviews";
+@import "components/contacts";
 
-
-
-@import "layout/visually-hidden";

@@ -1,3 +1,9 @@
+$('.reviews__slider').slick({
+    autoplay: true,
+    dots: true
+});
+
+
 var navMain = document.querySelector('.navigation');
 var navToggle = document.querySelector('.navigation__toggle');
 
@@ -12,3 +18,4 @@ navToggle.addEventListener('click', function () {
         navMain.classList.remove('navigation--opened');
     }
 });
+

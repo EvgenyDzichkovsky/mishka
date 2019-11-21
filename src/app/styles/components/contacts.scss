@@ -1,0 +1,81 @@
+.contacts{
+  position: relative;
+  background: #ffffff;
+  min-height: 457px;
+  padding-top: 70px;
+  padding-bottom: 105px;
+
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 457px;
+    justify-content: space-between;
+    padding-left: 175px;
+  }
+  & h4{
+    position: relative;
+    padding-top: 80px;
+    font-size: 54px;
+    font-family: "OpenSansBold", sans-serif;
+
+    &:before{
+      position: absolute;
+      @include png-sprite($icon-flag);
+      content: '';
+      left: -64px;
+      top: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__address{
+    font-size: 17px;
+    font-family: "OpenSansRegular", sans-serif;
+    font-style: normal;
+    min-height: 140px;
+    padding-top: 60px;
+
+    & a{
+      text-decoration: none;
+      color: black;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #62d1ba;
+    }
+  }
+
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+  }
+
+  &__item:nth-child(2){
+    width: 230px;
+  }
+
+  &__wrapper-address{
+    width: 50%;
+    height: 100%;
+  }
+  &__map{
+    position: absolute;
+    right: 0;
+    width: 50%;
+  }
+  &__btn{
+    font-size: 17px;
+    font-family: "OpenSansBold", sans-serif;
+    padding: 18px 40px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+  }
+
+  &__pr-25{
+    padding-right: 25px;
+  }
+}
