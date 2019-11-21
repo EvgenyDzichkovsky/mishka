@@ -1,0 +1,77 @@
+.footer {
+  background: #f1f1f1;
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    font-size: 0;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 102px;
+    height: 34px;
+  }
+
+  &__social-link {
+    position: relative;
+    content: "";
+    text-decoration: none;
+    color: #000;
+    padding: 60px 40px;
+
+    &--instagram,
+    &--facebook,
+    &--twitter {
+      &:before {
+        position: absolute;
+        content: "";
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &--instagram {
+      &:before {
+        @include png-sprite($icon-inst);
+      }
+    }
+
+    &--facebook {
+      &:before {
+        @include png-sprite($icon-facebook);
+      }
+    }
+
+    &--twitter {
+      &:before {
+        @include png-sprite($icon-twitter);
+      }
+    }
+  }
+
+
+  &__developer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-right: 58px;
+
+    font-size: 19px;
+    font-family: "OpenSansBold", sans-serif;
+
+    & a {
+      position: absolute;
+      @include png-sprite($icon-logo-html);
+      content: "";
+      right: 0;
+      font-size: 0;
+    }
+  }
+}

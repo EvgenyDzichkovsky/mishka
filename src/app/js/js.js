@@ -1,6 +1,5 @@
 $('.reviews__slider').slick({
-    autoplay: true,
-    dots: true
+    autoplay: true
 });
 
 
