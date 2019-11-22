@@ -1,11 +1,19 @@
 .footer {
   background: #f1f1f1;
 
+  @media (max-width: $mobile-width) {
+   min-height: 160px;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $mobile-width){
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -13,11 +21,20 @@
     flex-direction: row;
     font-size: 0;
     align-items: center;
+    width: 140px;
+
+    @media (max-width: $mobile-width) {
+     width: 100%;
+    }
   }
 
   &__logo {
     width: 102px;
     height: 34px;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
   }
 
   &__social-link {
@@ -26,6 +43,11 @@
     text-decoration: none;
     color: #000;
     padding: 60px 40px;
+
+    @media (max-width: $mobile-width) {
+      padding: 40px 40px;
+     border-bottom: 1px solid #e7e7e7;
+    }
 
     &--instagram,
     &--facebook,
@@ -65,6 +87,10 @@
 
     font-size: 19px;
     font-family: "OpenSansBold", sans-serif;
+
+    @media (max-width: $mobile-width) {
+      margin: 40px 0;
+    }
 
     & a {
       position: absolute;

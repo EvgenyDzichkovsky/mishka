@@ -1,42 +1,87 @@
-.contacts{
+.contacts {
   position: relative;
   background: #ffffff;
   min-height: 457px;
   padding-top: 70px;
   padding-bottom: 105px;
 
-  &__wrapper{
+  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    padding-bottom: 55px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 30px;
+    padding-bottom: 35px;
+  }
+
+  &__wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     min-height: 457px;
     justify-content: space-between;
     padding-left: 175px;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      padding-left: 0;
+      line-height: 30px;
+    }
+
+    @media (max-width: $mobile-width){
+      padding-left: 0;
+    }
   }
-  & h4{
+
+  & h4 {
     position: relative;
     padding-top: 80px;
     font-size: 54px;
     font-family: "OpenSansBold", sans-serif;
 
-    &:before{
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      padding-top: 0;
+      width: 668px;
+    }
+
+    @media (max-width: $mobile-width){
+      font-size: 18px;
+      padding-top: 0;
+    }
+
+    &:before {
       position: absolute;
       @include png-sprite($icon-flag);
       content: '';
       left: -64px;
       top: 50%;
       transform: translateX(-50%);
+
+      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+        top: 0;
+        left: 95%;
+      }
     }
   }
 
-  &__address{
+  &__address {
     font-size: 17px;
     font-family: "OpenSansRegular", sans-serif;
     font-style: normal;
     min-height: 140px;
     padding-top: 60px;
 
-    & a{
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media (max-width: $mobile-width) {
+      font-size: 15px;
+      line-height: 30px;
+    }
+
+    & a {
       text-decoration: none;
       color: black;
       padding-bottom: 4px;
@@ -44,7 +89,7 @@
     }
   }
 
-  &__list{
+  &__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -53,20 +98,67 @@
     padding-bottom: 40px;
   }
 
-  &__item:nth-child(2){
+  &__item:nth-child(2) {
     width: 230px;
+
+    @media (max-width: $mobile-width) {
+      width: 70%;
+    }
   }
 
-  &__wrapper-address{
+  &__wrapper-address {
     width: 50%;
     height: 100%;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      width: 100%;
+      padding-bottom: 515px;
+    }
+
+    @media (max-width: $mobile-width){
+      padding-bottom: 495px;
+      width: 100%;
+    }
   }
-  &__map{
+
+  &__map {
     position: absolute;
     right: 0;
     width: 50%;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      width: 100%;
+      top: 300px;
+    }
+
+    @media (max-width: $mobile-width){
+      width: 100%;
+      top: 340px;
+    }
+
+    & iframe {
+      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+        width: 100%;
+      }
+
+      @media (max-width: $mobile-width){
+        width: 100%;
+      }
+    }
   }
-  &__btn{
+
+  &__form {
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      align-self: center;
+    }
+
+    @media (max-width: $mobile-width) {
+      align-self: center;
+    }
+
+  }
+
+  &__btn {
     font-size: 17px;
     font-family: "OpenSansBold", sans-serif;
     padding: 18px 40px;
@@ -75,7 +167,7 @@
     text-transform: uppercase;
   }
 
-  &__pr-25{
+  &__pr-25 {
     padding-right: 25px;
   }
 }

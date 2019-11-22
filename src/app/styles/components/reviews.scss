@@ -1,5 +1,12 @@
 .reviews {
+  position: relative;
   background-color: #ffffff;
+
+  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+    background-image: url(../images/reviews-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 350px auto;
+  }
 
   &__wrapper {
     position: relative;
@@ -12,13 +19,34 @@
     background-size: 350px auto;
     padding-top: 80px;
     width: 100%;
-    padding-bottom: 170px;
+    padding-bottom: 160px;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+      background-image: none;
+      padding-bottom: 130px;
+    }
+
+    @media (max-width: $mobile-width){
+      background-image: none;
+      padding-top: 0;
+      padding-bottom: 45px;
+      flex-direction: row;
+    }
 
     &:after {
       position: absolute;
       @include png-sprite($icon-product-bottom);
       content: "";
       bottom: 0;
+      width: 100%;
+
+      @media (max-width: $mobile-width){
+        @include png-sprite($icon-product-mobile);
+      }
+      @media (max-width: $mobile-width) {
+       width: 100%;
+      }
+
     }
 
   }
@@ -30,6 +58,15 @@
     font-size: 53px;
     padding-bottom: 55px;
     padding-left: 175px;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+      padding-left: 0;
+    }
+
+    @media (max-width: $mobile-width){
+      font-size: 25px;
+      padding-left: 0;
+    }
   }
 
   &__item {
@@ -44,6 +81,22 @@
   &__slider {
     width: 100%;
     padding-left: 175px;
+
+    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+      padding-left: 0;
+
+      br{
+        display: none;
+      }
+    }
+
+    @media (max-width: $mobile-width){
+      padding-left: 0;
+
+      br{
+        display: none;
+      }
+    }
   }
 
   &__author {
@@ -61,6 +114,11 @@
 
   &__form {
     order: -1;
+
+    @media (max-width: $mobile-width){
+      order: 1;
+      padding-top: 126px;
+    }
   }
 
   &__btn {
@@ -70,5 +128,10 @@
     background: #ffffff;
     border: 2px solid #000000;
     text-transform: uppercase;
+
+    @media (max-width: $mobile-width){
+      padding: 17px 80px;
+    }
   }
+
 }
