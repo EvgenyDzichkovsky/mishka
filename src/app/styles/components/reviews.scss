@@ -2,7 +2,7 @@
   position: relative;
   background-color: #ffffff;
 
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+  @include tablet{
     background-image: url(../images/reviews-bg.jpg);
     background-repeat: no-repeat;
     background-size: 350px auto;
@@ -21,12 +21,12 @@
     width: 100%;
     padding-bottom: 160px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+    @include tablet{
       background-image: none;
       padding-bottom: 130px;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile{
       background-image: none;
       padding-top: 0;
       padding-bottom: 45px;
@@ -40,10 +40,10 @@
       bottom: 0;
       width: 100%;
 
-      @media (max-width: $mobile-width){
+      @include mobile{
         @include png-sprite($icon-product-mobile);
       }
-      @media (max-width: $mobile-width) {
+      @include mobile {
        width: 100%;
       }
 
@@ -59,11 +59,11 @@
     padding-bottom: 55px;
     padding-left: 175px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+    @include tablet{
       padding-left: 0;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile{
       font-size: 25px;
       padding-left: 0;
     }
@@ -82,7 +82,7 @@
     width: 100%;
     padding-left: 175px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width){
+    @include tablet{
       padding-left: 0;
 
       br{
@@ -90,7 +90,7 @@
       }
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile{
       padding-left: 0;
 
       br{
@@ -115,7 +115,7 @@
   &__form {
     order: -1;
 
-    @media (max-width: $mobile-width){
+    @include mobile{
       order: 1;
       padding-top: 126px;
     }
@@ -126,10 +126,17 @@
     font-size: 17px;
     font-family: "OpenSansBold", sans-serif;
     background: #ffffff;
-    border: 2px solid #000000;
+    border: 2px solid #444444;
     text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
 
-    @media (max-width: $mobile-width){
+    @include mobile {
+      padding: 16px 84px;
+    }
+
+    @include mobile{
       padding: 17px 80px;
     }
   }

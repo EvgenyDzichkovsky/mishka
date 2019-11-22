@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       flex-direction: column;
     }
   }
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       flex-direction: column;
       align-items: end;
       padding-left: 46px;
@@ -33,7 +33,7 @@
     text-decoration: none;
     color: #000000;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       padding: 30px 0;
     }
 
@@ -43,7 +43,7 @@
       line-height: 0;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       &--search {
         line-height: 17px;
         font-size: 17px;
@@ -73,16 +73,16 @@
         @include png-sprite($icon-mishka-desktop);
         content: "";
 
-        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+        @include tablet {
           @include png-sprite($icon-mishka-tablet);
         }
 
-        @media (max-width: $mobile-width) {
+        @include mobile {
           @include png-sprite($icon-mishka-phone);
         }
       }
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         padding: 20px;
         order: -1;
       }
@@ -98,15 +98,19 @@
         transform: translate(-50%, -50%);
         @include png-sprite($icon-search);
 
-        @media (max-width: $mobile-width) {
+        @include mobile {
           left: -30px;
         }
       }
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         border: none;
         font-size: 17px;
         padding: 30px 0 30px 0;
+      }
+
+      &:hover:before{
+        @include png-sprite($icon-search-hover);
       }
     }
 
@@ -117,21 +121,25 @@
         left: 30px;
         @include png-sprite($icon-cart);
 
-        @media (max-width: $mobile-width) {
+        @include mobile {
           left: -30px;
           transform: translate(-50%, -50%);
         }
       }
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         padding-left: 0;
+      }
+
+      &:hover:before{
+        @include png-sprite($icon-cart-hover);
       }
     }
 
     &--pr-35 {
       padding-right: 35px;
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         padding-right: 0;
       }
     }
@@ -139,7 +147,7 @@
     &--pl-35 {
       padding-left: 35px;
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         padding-left: 0;
       }
     }
@@ -147,14 +155,12 @@
     &--br {
       border-right: 1px solid #e7e7e7;
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         border-right: none;
       }
     }
   }
-
   //-------------------------КНОПКА---------------------------------
-
   &--closed &__link--mobile {
     display: flex;
   }
@@ -167,7 +173,7 @@
     display: none;
   }
 
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+  @include tablet {
     &--closed &__link--mobile {
       display: flex;
     }
@@ -179,10 +185,9 @@
     &__toggle {
       display: none;
     }
-
   }
 
-  @media (max-width: $mobile-width) {
+  @include mobile {
     &__toggle {
       position: absolute;
       top: 25px;
@@ -236,20 +241,13 @@
       &:after {
         transform: rotate(-45deg);
       }
-
-      //&:active::before,
-      //&:active::after {
-      //  background: rgba(255, 255, 255, 0.3);
-      //}
     }
 
     &--closed &__link--mobile {
       display: none;
     }
   }
-  //----------------------------------------------------------
 }
-
 
 .sub-navigation {
   display: flex;
@@ -273,12 +271,12 @@
   &__link--pr-60 {
     padding-right: 60px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       padding-right: 37px;
     }
   }
 
-  @media (max-width: $mobile-width) {
+  @include mobile {
     display: none;
   }
 
@@ -288,7 +286,7 @@
 .hide-tablet {
   display: flex;
 
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+  @include tablet {
     display: none;
   }
 }
@@ -296,7 +294,7 @@
 .show-tablet {
   display: none;
 
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+  @include tablet {
     display: inline-block;
   }
 }

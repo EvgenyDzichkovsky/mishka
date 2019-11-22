@@ -8,12 +8,11 @@
   padding-bottom: 80px;
   justify-content: center;
 
-
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+  @include tablet {
     padding-top: 57px;
   }
 
-  @media (max-width: $mobile-width) {
+  @include mobile {
     padding: 0;
     padding-bottom: 36px;
   }
@@ -26,11 +25,11 @@
     bottom: 0;
     background-repeat: repeat-x;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 100%;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       width: 100%;
       @include png-sprite($icon-product-mobile);
       background-repeat: repeat-x;
@@ -40,11 +39,11 @@
   &__wrapper {
     width: 1050px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 668px;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       width: 260px;
     }
   }
@@ -54,13 +53,13 @@
     flex-direction: row;
     margin: -100px 0;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       margin: 0;
       justify-content: space-between;
       flex-direction: row-reverse;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       flex-direction: column-reverse;
       margin: 0;
       margin-top: 34px;
@@ -75,15 +74,14 @@
       min-width: 530px;
       z-index: 2;
 
-      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      @include tablet {
         font-size: 43px;
         width: 100%;
       }
-      @media (max-width: $mobile-width) {
+      @include mobile {
         font-size: 25px;
         min-width: auto;
       }
-
     }
 
     & span {
@@ -96,18 +94,18 @@
       padding-left: 47px;
       padding-right: 58px;
 
-      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      @include tablet {
         padding-left: 0;
         padding-bottom: 60px;
       }
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         padding: 0;
         font-size: 17px;
         align-self: flex-start;
         padding-top: 10px;
 
-        br{
+        br {
           display: none;
         }
       }
@@ -119,11 +117,11 @@
     flex-direction: row;
     height: 636px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       height: auto;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       flex-direction: column-reverse;
       width: 260px;
       height: 100%;
@@ -137,11 +135,11 @@
     flex-direction: column;
     align-self: flex-end;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       padding-left: 0;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       padding-left: 0;
       width: 100%;
     }
@@ -157,11 +155,11 @@
     margin-bottom: 67px;
     line-height: 30px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       margin-top: 0;
       margin-bottom: 55px;
     }
-    @media (max-width: $mobile-width) {
+    @include mobile {
       font-size: 15px;
       width: 260px;
 
@@ -185,8 +183,8 @@
       padding: 12px 0;
       justify-content: space-between;
 
-      @media (max-width: $mobile-width) {
-       width: 260px;
+      @include mobile {
+        width: 260px;
       }
     }
   }
@@ -201,11 +199,11 @@
     padding-top: 112px;
     margin-bottom: 34px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       padding-top: 37px;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       font-size: 17px;
       width: auto;
       margin: 0;
@@ -226,7 +224,7 @@
   &__form {
     width: 292px;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       width: auto;
     }
   }
@@ -239,9 +237,10 @@
     cursor: pointer;
     padding: 16px 97px;
     background: #ffffff;
-    border: 2px solid #000000;
+    border: 2px solid #444444;
+    transition: 0.3s;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       padding: 16px 84px;
     }
   }
@@ -250,25 +249,19 @@
     width: 50%;
 
     & img {
-      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      @include tablet {
         width: 334px;
         height: 404px;
       }
 
-      @media (max-width: $mobile-width) {
+      @include mobile {
         width: 260px;
         height: 100%;
       }
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       width: 100%;
     }
   }
-
-
-}
-
-@media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
-
 }

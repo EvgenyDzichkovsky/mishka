@@ -5,11 +5,11 @@
   padding-top: 70px;
   padding-bottom: 105px;
 
-  @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+  @include tablet {
     padding-bottom: 55px;
   }
 
-  @media (max-width: $mobile-width) {
+  @include mobile {
     padding-top: 30px;
     padding-bottom: 35px;
   }
@@ -22,12 +22,12 @@
     justify-content: space-between;
     padding-left: 175px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       padding-left: 0;
       line-height: 30px;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile {
       padding-left: 0;
     }
   }
@@ -38,12 +38,12 @@
     font-size: 54px;
     font-family: "OpenSansBold", sans-serif;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       padding-top: 0;
       width: 668px;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile {
       font-size: 18px;
       padding-top: 0;
     }
@@ -56,7 +56,7 @@
       top: 50%;
       transform: translateX(-50%);
 
-      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      @include tablet {
         top: 0;
         left: 95%;
       }
@@ -70,13 +70,13 @@
     min-height: 140px;
     padding-top: 60px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 100%;
       display: flex;
       flex-direction: row;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       font-size: 15px;
       line-height: 30px;
     }
@@ -86,6 +86,16 @@
       color: black;
       padding-bottom: 4px;
       border-bottom: 1px solid #62d1ba;
+
+      &:hover{
+        color: #62d1ba;
+        opacity: 1;
+      }
+
+      &:active{
+        opacity: 0.3;
+        transition: 0s;
+      }
     }
   }
 
@@ -101,7 +111,7 @@
   &__item:nth-child(2) {
     width: 230px;
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       width: 70%;
     }
   }
@@ -110,12 +120,12 @@
     width: 50%;
     height: 100%;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 100%;
       padding-bottom: 515px;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile {
       padding-bottom: 495px;
       width: 100%;
     }
@@ -126,36 +136,35 @@
     right: 0;
     width: 50%;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 100%;
       top: 300px;
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile {
       width: 100%;
       top: 340px;
     }
 
     & iframe {
-      @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+      @include tablet {
         width: 100%;
       }
 
-      @media (max-width: $mobile-width){
+      @include mobile {
         width: 100%;
       }
     }
   }
 
   &__form {
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       align-self: center;
     }
 
-    @media (max-width: $mobile-width) {
+    @include mobile {
       align-self: center;
     }
-
   }
 
   &__btn {
@@ -163,8 +172,11 @@
     font-family: "OpenSansBold", sans-serif;
     padding: 18px 40px;
     background: #ffffff;
-    border: 2px solid #000000;
+    border: 2px solid #444444;
     text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
   &__pr-25 {

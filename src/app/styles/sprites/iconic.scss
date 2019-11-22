@@ -27,7 +27,7 @@
 @function iconic-char($filename) {
 	$char: "";
 
-	@if $filename == search {
+	@if $filename == searching {
 		$char: "\E001";
 	}
 
@@ -45,6 +45,6 @@
 	}
 }
 
-.iconic-search {
-	@include iconic(search);
+.iconic-searching {
+	@include iconic(searching);
 }

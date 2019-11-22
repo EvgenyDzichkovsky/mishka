@@ -9,18 +9,17 @@
     background-repeat: no-repeat;
     background-position: center;
 
-
-
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width)  {
+    @include tablet {
       background-size: cover;
       min-height: 748px;
     }
-    @media (max-width: $mobile-width){
+    @include mobile {
       background-size: 575px auto;
       background-position-y: 0;
       min-height: 558px;
     }
   }
+
   position: relative;
   background: #f9f9f9;
   width: 100%;
@@ -34,8 +33,7 @@
     background-repeat: repeat-x;
     background-position-x: 50%;
 
-
-    @media (max-width: $tablet-width)  {
+    @include mobile {
       position: absolute;
       @include png-sprite($icon-hero-bottom);
       content: "";
@@ -44,11 +42,10 @@
       background-repeat: repeat-x;
       background-position-x: 50%;
     }
-    @media (max-width: $mobile-width){
+    @include mobile {
       width: 0;
     }
   }
-
 
   & h1 {
     margin: 0;
@@ -59,13 +56,13 @@
     padding-top: 100px;
     line-height: 57px;
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       font-size: 43px;
       width: 100%;
       padding-top: 164px;
 
     }
-    @media (max-width: $mobile-width) {
+    @include mobile {
       font-size: 27px;
       width: 260px;
       align-self: center;
@@ -73,8 +70,6 @@
       line-height: 30px;
     }
   }
-
-
 
   &__list {
     position: relative;
@@ -85,18 +80,16 @@
     display: flex;
     flex-direction: row;
 
-
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
-        display: flex;
+    @include tablet {
+      display: flex;
       width: 668px;
-        flex-direction: row;
+      flex-direction: row;
     }
-    @media (max-width: $mobile-width){
+    @include mobile {
       display: flex;
       width: 100%;
       flex-direction: column;
     }
-
   }
 
   &__items {
@@ -115,15 +108,14 @@
         transform: translateY(-10px);
         transition: transform 0.3s ease-in-out;
 
-        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+        @include tablet {
           transform: translateY(-10px);
           transition: 0.3s;
         }
-        @media (max-width: $mobile-width){
+        @include mobile {
           transform: none;
         }
       }
-
     }
 
     &--right-card {
@@ -133,22 +125,20 @@
         transform: translateY(-10px);
         transition: 0.3s;
 
-        @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+        @include tablet {
           transform: translateY(-10px);
           transition: 0.3s;
         }
-        @media (max-width: $mobile-width){
+        @include mobile {
           transform: none;
         }
       }
-
-
     }
 
-    @media (min-width: $mobile-width + 1) and (max-width: $tablet-width) {
+    @include tablet {
       width: 50%;
     }
-    @media (max-width: $mobile-width){
+    @include mobile {
       width: 100%;
     }
   }
@@ -163,7 +153,7 @@
     padding-top: 35px;
     padding-bottom: 34px;
     padding-left: 37px;
-    padding-right: 30%;
+    padding-right: 50%;
     line-height: 30px;
 
     &--interior {
@@ -172,7 +162,6 @@
         @include png-sprite($icon-interrier);
         content: "";
         right: 36px;
-        opacity: 0.5;
       }
     }
 
@@ -182,7 +171,6 @@
         @include png-sprite($icon-toy);
         content: "";
         right: 36px;
-        opacity: 0.5;
       }
     }
 
@@ -192,15 +180,15 @@
     }
 
     &:active:after {
-      opacity: 0.3;
+      opacity: 0.8;
       transition: 0s;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 1);
     }
 
-    @media (max-width: $mobile-width){
+    @include mobile {
       padding-right: 18%;
     }
   }
