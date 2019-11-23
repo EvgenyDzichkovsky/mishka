@@ -11,12 +11,15 @@
 @import "libraries/slick";
 @import "layout/variables";
 @import "layout/common";
+@import "layout/videoplayer";
 @import "layout/visually-hidden";
 @import "mixins/layout";
 
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/wrapper";
+
 
 @import "components/navigation";
 @import "components/hero";
@@ -24,4 +27,5 @@
 @import "components/about";
 @import "components/reviews";
 @import "components/contacts";
+@import "components/catalog";
 

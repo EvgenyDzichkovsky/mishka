@@ -252,6 +252,14 @@
 .sub-navigation {
   display: flex;
 
+  &__wrapper--f1f1f1{
+    background: #f1f1f1;
+  }
+
+  &__wrapper--f9f9f9{
+    background: #f9f9f9;
+  }
+
   &__info {
     font-family: "OpenSansRegular", sans-serif;
     font-size: 15px;
