@@ -1,34 +1,35 @@
 body {
-transition: 0.3s;
+  transition: 0.3s;
+
   h1, h2, h3, h4, h5, p, ul, li {
     padding: 0;
     margin: 0;
   }
 
-  ul{
+  ul {
     list-style: none;
   }
 
 
-
-  & a{
+  & a {
     text-decoration: none;
     color: #444444;
-    &:hover{
+
+    &:hover {
       opacity: 0.6;
     }
 
-    &:active{
+    &:active {
       opacity: 0.3;
     }
   }
 }
 
-//.wrapper__bg{
-//  background: #f1f1f1;
-//}
+.hidden {
+  display: none !important;
+}
 
-.btn{
+.btn {
   font-family: "OpenSansBold", sans-serif;
   font-size: 17px;
   text-transform: uppercase;
@@ -39,14 +40,14 @@ transition: 0.3s;
   border: 2px solid #444444;
   transition: 0.3s;
 
-  &:hover{
+  &:hover {
     background: #444444;
     border: 2px solid #444444;
     color: #ffffff;
     transition: 0.3s;
   }
 
-  &:active{
+  &:active {
     color: rgba(255, 255, 255, 0.3);
     transition: 0s;
   }

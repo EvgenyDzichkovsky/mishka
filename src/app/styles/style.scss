@@ -11,7 +11,7 @@
 @import "libraries/slick";
 @import "layout/variables";
 @import "layout/common";
-@import "layout/videoplayer";
+@import "layout/video-youtube";
 @import "layout/visually-hidden";
 @import "mixins/layout";
 
@@ -28,4 +28,6 @@
 @import "components/reviews";
 @import "components/contacts";
 @import "components/catalog";
+@import "components/modal";
+
 

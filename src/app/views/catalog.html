@@ -114,7 +114,7 @@
 
 				</div>
 				<div class="catalog__video">
-					<div class="video-youtube video-youtube_overlay">
+					<div class="video-youtube video-youtube__overlay">
 						<div id="video-youtube__content"
 							 class="video-youtube__content video-youtube__content_hide-origin-play-btn"></div>
 						<button type="button" class="video-youtube__new-play-btn"></button>
@@ -124,7 +124,7 @@
 						<p>По просьбам наших любимых фоловерах мы сняли для вас подробное видео о том, как появляются
 							наши товары.</p>
 						<form class="catalog__form">
-							<input class="catalog__btn btn" type="button" value="сделать заказ">
+							<input class="catalog__btn btn open-modal" type="button" value="сделать заказ">
 						</form>
 					</div>
 				</div>
@@ -147,11 +147,29 @@
 		</div>
 	</footer>
 </div>
+
+<div class="modal">
+	<div class="modal__wrp">
+		<button class="modal__close" type="button" title="Закрыть">закрыть</button>
+		<form class="modal__form" action="#" method="post">
+			<h2>Добавить в корзину</h2>
+			<p>Выберите размер:</p>
+			<div class="modal__choice">
+				<input type="radio" class="modal__radio" checked="" value="s" name="size" id="size-s">
+				<label class="modal__label" for="size-s">S</label>
+				<input type="radio" class="modal__radio" value="m" name="size" id="size-m">
+				<label class="modal__label" for="size-m">M</label>
+				<input type="radio" class="modal__radio" value="l" name="size" id="size-l">
+				<label class="modal__label" for="size-l">L</label>
+			</div>
+			<button class="modal__button btn" type="submit">Добавить</button>
+		</form>
+	</div>
+</div>
+<div class="modal__overlay"></div>
 <script type="text/javascript" src="/js/libraries.js"></script>
 <script type="text/javascript" src="/js/libs/slick.min.js"></script>
+<script type="text/javascript" src="/js/modal.js"></script>
 <script src="js/js.js"></script>
 </body>
 </html>
-<!--<iframe width="1263" height="712" src="https://www.youtube.com/embed/vjVkXlxsO8Q"
-frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
- picture-in-picture" allowfullscreen></iframe>-->
