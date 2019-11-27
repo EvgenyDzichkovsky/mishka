@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="navigation__wrapper">
 					<div class="navigation__group hide-tablet">
-						<a href="#"
+						<a href="catalog.html"
 						   class="navigation__link navigation__link--mobile navigation__link--pr-35 navigation__link--br">Каталог
 							товаров</a>
 						<a href="#" class="navigation__link navigation__link--mobile navigation__link--pl-35">Вязание на
@@ -37,7 +37,8 @@
 		<div class="sub-navigation__wrapper--f1f1f1">
 			<div class="container">
 				<nav class="sub-navigation">
-					<a href="#" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог товаров</a>
+					<a href="catalog.html" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог
+						товаров</a>
 					<a href="#" class="sub-navigation__link show-tablet">Вязание на заказ</a>
 					<a href="#" class="sub-navigation__link sub-navigation__link--pr-60 hide-tablet">Новые
 						постулпения</a>
@@ -53,64 +54,70 @@
 		</div>
 		<div class="form__content">
 			<div class="form__content-wrap">
-				<p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания!
+				<p class="form__description form__description--head">Мы будем рады воплотить в жизнь ваши пожелания!
 					Заполните простую форму заказа и мы свяжемся с вами,
 					чтобы уточнить детали.</p>
 			</div>
 			<form method="post" action="#">
 				<div class="form__filter form__filter--radio">
 					<div class="container">
-						<p class="form__criterion">Тип</p>
-						<div class="form__wrap-input">
-							<input class="form__radio" type="radio" name="radio"
-								   value="accessories" id="radio-toggle" checked="">
-							<label class="form__label" for="radio-toggle">Аксессуар для интерьера</label>
-							<input class="form__radio" type="radio" name="radio" value="toys"
-								   id="radio-toggle-2">
-							<label class="form__label" for="radio-toggle-2">Детская игрушка</label>
+						<div class="form__positioner">
+							<p class="form__criterion">Тип</p>
+							<div class="form__wrap-input">
+								<input class="form__radio" type="radio" name="radio"
+									   value="accessories" id="radio-toggle" checked="">
+								<label class="form__label" for="radio-toggle">Аксессуар для интерьера</label>
+								<input class="form__radio" type="radio" name="radio" value="toys"
+									   id="radio-toggle-2">
+								<label class="form__label" for="radio-toggle-2">Детская игрушка</label>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="form__filter form__filter--checkbox bg-f1f1f1">
 					<div class="container">
-						<p class="form__criterion">Цвет</p>
-						<div class="form__wrap-input">
-							<input class="form__checkbox" type="checkbox" name="checkbox-1" value="white"
-								   id="checkbox-1" checked="">
-							<label class="form__label--checkbox" for="checkbox-1">Белый</label>
-							<input class="form__checkbox" type="checkbox" name="checkbox-2" value="grey"
-								   id="checkbox-2" checked="">
-							<label class="form__label--checkbox" for="checkbox-2">Серый</label>
-							<input class="form__checkbox" type="checkbox" name="checkbox-3"
-								   value="tiffany"
-								   id="checkbox-3">
-							<label class="form__label--checkbox" for="checkbox-3">«Тиффани»</label>
-							<input class="form__checkbox" type="checkbox" name="checkbox-4" value="black"
-								   id="checkbox-4">
-							<label class="form__label--checkbox" for="checkbox-4">Черный</label>
-							<input class="form__checkbox" type="checkbox" name="checkbox-5" value="pink"
-								   id="checkbox-5">
-							<label class="form__label--checkbox" for="checkbox-5">Розовый</label>
-							<input class="form__checkbox" type="checkbox" name="checkbox-6"
-								   value="orange"
-								   id="checkbox-6">
-							<label class="form__label--checkbox" for="checkbox-6">Оранжевый</label>
+						<div class="form__positioner">
+							<p class="form__criterion">Цвет</p>
+							<div class="form__wrap-input form__wrap-input--wider">
+								<input class="form__checkbox" type="checkbox" name="checkbox-1" value="white"
+									   id="checkbox-1" checked="">
+								<label class="form__label--checkbox" for="checkbox-1">Белый</label>
+								<input class="form__checkbox" type="checkbox" name="checkbox-2" value="grey"
+									   id="checkbox-2" checked="">
+								<label class="form__label--checkbox" for="checkbox-2">Серый</label>
+								<input class="form__checkbox" type="checkbox" name="checkbox-3"
+									   value="tiffany"
+									   id="checkbox-3">
+								<label class="form__label--checkbox" for="checkbox-3">«Тиффани»</label>
+								<input class="form__checkbox" type="checkbox" name="checkbox-4" value="black"
+									   id="checkbox-4">
+								<label class="form__label--checkbox" for="checkbox-4">Черный</label>
+								<input class="form__checkbox" type="checkbox" name="checkbox-5" value="pink"
+									   id="checkbox-5">
+								<label class="form__label--checkbox" for="checkbox-5">Розовый</label>
+								<input class="form__checkbox" type="checkbox" name="checkbox-6"
+									   value="orange"
+									   id="checkbox-6">
+								<label class="form__label--checkbox" for="checkbox-6">Оранжевый</label>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="form__filter form__filter--name">
 					<div class="container">
-						<p class="form__criterion">ФИО</p>
-						<div class="form__wrap-input">
-							<label class="form__label-name" for="name">Имя:</label>
-							<input class="form__text-name" type="text" name="user-name" id="name"
-								   placeholder="Введите ваше имя*" required="">
-							<label class="form__label-name" for="surname">Фамилия:</label>
-							<input class="form__text-name" type="text" name="user-surname" id="surname"
-								   placeholder="Укажите фамилию*" required="">
-							<label class="form__label-name" for="patronymic">Отчество:</label>
-							<input class="form__text-name" type="text" name="user-patronymic" id="patronymic"
-								   placeholder="Отчество, если желаете">
+						<div class="form__positioner">
+							<p class="form__criterion">ФИО</p>
+							<div class="form__wrap-input">
+								<label class="form__label-name" for="name">Имя:</label>
+								<input class="form__text-name" type="text" name="user-name" id="name"
+									   placeholder="Введите ваше имя*" required="">
+								<label class="form__label-name" for="surname">Фамилия:</label>
+								<input class="form__text-name" type="text" name="user-surname" id="surname"
+									   placeholder="Укажите фамилию*" required="">
+								<label class="form__label-name" for="patronymic">Отчество:</label>
+								<input class="form__text-name" type="text" name="user-patronymic" id="patronymic"
+									   placeholder="Отчество, если желаете">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -130,16 +137,22 @@
 				</div>
 				<div class="form__filter form__filter--name">
 					<div class="container">
-						<p class="form__criterion">Доп</p>
-						<div class="form__wrap-input">
-							<label class="visually-hidden" for="wish"></label>
-							<textarea placeholder="Опишите все ваши пожелания к заказу" class="form__textarea"
-									  name="wishes" id="wish"></textarea>
+						<div class="form__positioner">
+							<div class="form__wrap-textarea-positioner">
+								<p class="form__criterion">Доп</p>
+								<div class="form__wrap-textarea">
+									<label class="visually-hidden" for="wish"></label>
+									<textarea placeholder="Опишите все ваши пожелания к заказу" class="form__textarea"
+											  name="wishes" id="wish"></textarea>
+								</div>
+							</div>
+							<div class="form__btn-wrap">
+								<p class="form__description">
+									<sup>*</sup>Поля обязательны для заполнения
+								</p>
+								<button class="form__button btn" type="submit">Отправить заказ</button>
+							</div>
 						</div>
-						<p class="form__description">
-							<sup>*</sup>Поля обязательны для заполнения
-						</p>
-						<button class="form__button form__button--textarea btn" type="submit">Отправить заказ</button>
 					</div>
 				</div>
 			</form>
