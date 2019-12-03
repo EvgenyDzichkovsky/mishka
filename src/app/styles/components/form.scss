@@ -241,7 +241,7 @@
   flex-wrap: wrap;
 
   @include tablet{
-    flex-direction: row;
+    flex-direction: column;
   }
 }
   &__criterion {
@@ -257,7 +257,6 @@
     margin-bottom: 35px;
 
     @include tablet{
-      margin-bottom: 0;
       text-align: left;
     }
 
@@ -298,6 +297,10 @@
 
     @include mobile{
       width: 260px;
+    }
+
+    @include tablet{
+      width: 500px;
     }
   }
 
