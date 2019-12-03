@@ -53,7 +53,7 @@ function onYouTubePlayerReady(event) {
     newPLayBtn.addEventListener("click", function(event) {
         targetYoutubeVideo.playVideo();
         this.classList.add('hidden');
-        videoDomElem.classList.remove('video-youtube__content_hide-origin-play-btn');
+        videoDomElem.classList.remove('video-youtube__btn');
         videoDomElem.parentNode.classList.remove('video-youtube_overlay');
     });
 }
