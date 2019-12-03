@@ -5,17 +5,6 @@
   align-items: center;
   background: #f1f1f1;
 
-  h2 {
-    font-size: 58px;
-    padding-top: 40px;
-    padding-bottom: 99px;
-
-    @include mobile {
-      font-size: 27px;
-      padding: 27px 0;
-    }
-  }
-
   &__content {
     position: relative;
     width: 100%;
@@ -64,13 +53,12 @@
     }
   }
 
-  &__positioner{
-    display: flex;
-    flex-direction: column;
-  }
-
   &__wrap-textarea-positioner{
     display: flex;
+
+    @include tablet{
+      width: 668px;
+    }
 
     @include mobile{
       flex-direction: column;
@@ -109,7 +97,7 @@
     align-items: flex-start;
     width: 440px;
     padding-left: 82px;
-    height: 60px;
+    margin: 30px 0;
 
     @include mobile{
       width: 200px;
@@ -132,7 +120,7 @@
 
   }
 
-  &__radio:checked + label::after {
+  &__radio:checked + span::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -147,15 +135,15 @@
     display: none;
   }
 
-  &__label--checkbox {
+  &__label-checkbox {
     position: relative;
     color: #000000;
     line-height: 18px;
     font-size: 19px;
     display: flex;
     align-items: flex-start;
-    height: 60px;
     width: 150px;
+    margin: 30px 0;
     padding-left: 62px;
 
     &:hover:before {
@@ -171,7 +159,7 @@
   }
 
 
-  &__checkbox + label::before {
+  &__checkbox + span::before {
     content: "";
     position: absolute;
     width: 36px;
@@ -181,7 +169,7 @@
     top: -11px;
   }
 
-  &__checkbox:checked + label::after {
+  &__checkbox:checked + span::after {
     content: "";
     position: absolute;
     width: 21px;
@@ -197,7 +185,7 @@
     flex-wrap: wrap;
 
     @include tablet{
-      width: 670px;
+      width: 500px;
     }
 
     @include mobile{
@@ -210,13 +198,19 @@
   &__label-name {
     position: relative;
     color: #000000;
-    font-weight: 700;
     font-size: 19px;
     display: flex;
     align-items: flex-start;
-    width: 130px;
+    width: inherit;
+
+    @include tablet{
+      width: 500px;
+
+    }
 
     @include mobile{
+      display: flex;
+      flex-direction: column;
       margin-bottom: 15px;
     }
   }
@@ -231,12 +225,14 @@
     font-size: 19px;
     padding-bottom: 7px;
     margin-bottom: 40px;
+    margin-left: 30px;
     padding-left: 15px;
     margin-top: -7px;
     flex-grow: 1;
     color: #444444;
 
     @include mobile{
+      margin-top: 20px;
       width: auto;
     }
 
@@ -244,36 +240,37 @@
       border-color: #62d1ba;
     }
   }
+&__positioner{
+  display: flex;
+  flex-wrap: wrap;
 
+  @include tablet{
+    flex-direction: row;
+  }
+}
   &__criterion {
     position: relative;
-    width: 113px;
     font-size: 17px;
     line-height: 16px;
-    font-weight: 700;
     color: #63d1bb;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+    width: 175px;
+    text-align: center;
     margin-bottom: 35px;
+
+    @include tablet{
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    @include mobile{
+      text-align: left;
+    }
   }
 
   &__input-phone {
-    font-family: "OpenSansRegular", sans-serif;
-    border: none;
-    width: 700px;
-    position: relative;
-    border-bottom: 2px solid #000000;
-    height: 38px;
-    padding-bottom: 10px;
-    padding-left: 18px;
-    margin-bottom: 22px;
-    font-size: 19px;
-    flex-grow: 1;
-    color: #444444;
-    padding-right: 40px;
-    margin-right: 2px;
-    background: #f1f1f1;
 
     @include mobile{
       width: 220px;
@@ -284,25 +281,35 @@
     }
   }
 
-  &__input-email {
+  input[placeholder]{
+    padding-left: 20px;
+  }
+
+  &__input {
     font-family: "OpenSansRegular", sans-serif;
     border: none;
-    width: 700px;
+    width: 680px;
     position: relative;
     border-bottom: 2px solid #000000;
     height: 38px;
-    padding-bottom: 10px;
-    padding-left: 18px;
     margin-bottom: 22px;
     font-size: 19px;
     flex-grow: 1;
     color: #444444;
-    padding-right: 40px;
     margin-right: 2px;
     background: #f1f1f1;
 
     @include mobile{
-      width: 220px;
+      width: 260px;
+    }
+  }
+
+
+
+  &__input-email {
+
+    @include mobile{
+      width: 260px;
     }
 
     &:hover {
@@ -312,7 +319,6 @@
 
   &__wrap-input--phone {
     position: relative;
-    width: 100%;
 
     @include tablet{
       width: 670px;
@@ -325,14 +331,13 @@
       right: 0;
 
       @include mobile{
-        top: 50%;
+        top: 0;
       }
     }
   }
 
   &__wrap-input--email {
     position: relative;
-    width: 100%;
 
     @include tablet{
       width: 670px;
@@ -346,7 +351,7 @@
       right: 0;
 
       @include mobile{
-        top: 50%;
+        top: 0;
       }
     }
   }
@@ -357,7 +362,7 @@
     line-height: 20px;
     border: 2px solid black;
     height: 118px;
-    width: 700px;
+    width: 680px;
     padding: 11px;
     color: #444444;
 
@@ -383,7 +388,6 @@
   &__btn-wrap{
     display: flex;
     align-items: center;
-    padding-left: 113px;
     justify-content: space-between;
     margin-top: 50px;
 
