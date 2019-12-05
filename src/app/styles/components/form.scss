@@ -40,30 +40,31 @@
     font-size: 17px;
     order: 1;
 
-    @include mobile{
+    @include mobile {
       font-size: 13px;
     }
 
-    &--head{
+    &--head {
       width: 700px;
 
-      @include mobile{
+      @include mobile {
         width: 260px;
       }
     }
   }
 
-  &__wrap-textarea-positioner{
+  &__wrap-textarea-positioner {
     display: flex;
 
-    @include tablet{
+    @include tablet {
       width: 668px;
     }
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
     }
   }
+
   form {
     display: flex;
     flex-direction: column;
@@ -76,11 +77,11 @@
     width: 100%;
     padding: 50px 0;
 
-    &--radio{
+    &--radio {
       padding-top: 75px;
     }
 
-    &--checkbox{
+    &--checkbox {
       padding-top: 75px;
     }
   }
@@ -99,7 +100,7 @@
     padding-left: 82px;
     margin: 30px 0;
 
-    @include mobile{
+    @include mobile {
       width: 200px;
     }
 
@@ -158,7 +159,6 @@
 
   }
 
-
   &__checkbox + span::before {
     content: "";
     position: absolute;
@@ -184,11 +184,11 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include tablet{
+    @include tablet {
       width: 500px;
     }
 
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       width: 260px;
     }
@@ -203,12 +203,12 @@
     align-items: flex-start;
     width: inherit;
 
-    @include tablet{
+    @include tablet {
       width: 500px;
 
     }
 
-    @include mobile{
+    @include mobile {
       display: flex;
       flex-direction: column;
       margin-bottom: 15px;
@@ -227,23 +227,25 @@
     margin-left: 30px;
     color: #444444;
 
-    @include mobile{
+    @include mobile {
       margin-top: 20px;
       width: auto;
     }
 
-    &:hover{
+    &:hover {
       border-color: #62d1ba;
     }
   }
-&__positioner{
-  display: flex;
-  flex-wrap: wrap;
 
-  @include tablet{
-    flex-direction: column;
+  &__positioner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
-}
+
   &__criterion {
     position: relative;
     font-size: 17px;
@@ -256,27 +258,43 @@
     text-align: center;
     margin-bottom: 35px;
 
-    @include tablet{
+    @include tablet {
       text-align: left;
     }
 
-    @include mobile{
+    @include mobile {
       text-align: left;
     }
   }
 
-  &__input-phone {
+  &__input--phone {
 
-    @include mobile{
+    @include mobile {
       width: 220px;
     }
 
-    &:hover {
-      border-bottom: 2px solid #63d1bb;
+    @include tablet {
+      width: 670px;
     }
   }
 
-  input[placeholder]{
+  &__input--phone {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-phone);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+
+  input[placeholder] {
     padding-left: 20px;
     padding-bottom: 7px;
   }
@@ -295,54 +313,32 @@
     margin-right: 2px;
     background: #f1f1f1;
 
-    @include mobile{
-      width: 260px;
-    }
-
-    @include tablet{
-      width: 500px;
-    }
-  }
-
-
-
-  &__input-email {
-
-    @include mobile{
-      width: 260px;
-    }
-
     &:hover {
       border-bottom: 2px solid #63d1bb;
     }
-  }
 
-  &__wrap-input--phone {
-    position: relative;
-
-    @include tablet{
-      width: 670px;
+    @include mobile {
+      width: 260px;
     }
 
-    &:after {
-      position: absolute;
-      @include png-sprite($icon-phone);
-      content: "";
-      right: 0;
+    @include tablet {
+      width: 670px;
+    }
+  }
 
-      @include mobile{
-        top: 0;
-      }
+  &__input--email {
+
+    @include mobile {
+      width: 260px;
+    }
+
+    @include tablet {
+      width: 670px;
     }
   }
 
   &__wrap-input--email {
     position: relative;
-
-    @include tablet{
-      width: 670px;
-    }
-
 
     &:after {
       position: absolute;
@@ -350,7 +346,7 @@
       content: "";
       right: 0;
 
-      @include mobile{
+      @include mobile {
         top: 0;
       }
     }
@@ -366,35 +362,64 @@
     padding: 11px;
     color: #444444;
 
-    @include tablet{
+    @include tablet {
       width: 510px;
     }
 
-    @include mobile{
+    @include mobile {
       width: 234px;
     }
 
 
-    &:hover{
+    &:hover {
       border-color: #63d1bb;
     }
   }
 
-  &__button{
+  &__button {
     margin-top: 30px;
     padding: 17px 30px;
   }
 
-  &__btn-wrap{
+  &__btn-wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
 
-    @include mobile{
+    @include mobile {
       flex-direction: column-reverse;
       padding-left: 0;
       margin-top: 30px;
+    }
+  }
+
+
+  &__label-phone{
+    position: relative;
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-phone);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+  &__label-email{
+    position: relative;
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-email);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
     }
   }
 }
