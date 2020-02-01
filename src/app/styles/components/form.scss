@@ -395,7 +395,7 @@
   }
 
 
-  &__label-phone{
+  &__label-input--phone{
     position: relative;
     &:after {
       position: absolute;
@@ -409,7 +409,7 @@
     }
   }
 
-  &__label-email{
+  &__label-input--email{
     position: relative;
     &:after {
       position: absolute;
