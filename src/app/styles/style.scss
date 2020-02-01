@@ -5,18 +5,22 @@
 
 //Mixins
 @import "mixins/png-sprite";
+@import "mixins/layout";
 //@import "mixins/svg-sprite";
 @import "fonts/fonts";
 @import "libraries/normalize";
 @import "libraries/slick";
 @import "layout/variables";
 @import "layout/common";
+@import "layout/video-youtube";
 @import "layout/visually-hidden";
-@import "mixins/layout";
+
 
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/wrapper";
+
 
 @import "components/navigation";
 @import "components/hero";
@@ -24,4 +28,8 @@
 @import "components/about";
 @import "components/reviews";
 @import "components/contacts";
+@import "components/catalog";
+@import "components/modal";
+@import "components/form";
+
 

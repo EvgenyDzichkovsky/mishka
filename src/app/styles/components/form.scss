@@ -1,0 +1,456 @@
+.form {
+  font-family: "OpenSansBold", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f1f1f1;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding-top: 128px;
+
+    &:before {
+      position: absolute;
+      background: url("../images/png_sprite/product-top.png");
+      content: '';
+      top: -15px;
+      width: 100%;
+      height: 30px;
+
+      @include mobile {
+        content: none;
+      }
+    }
+
+    @include mobile {
+      padding-top: 57px;
+    }
+  }
+
+  &__content-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__description {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 17px;
+    order: 1;
+
+    @include mobile {
+      font-size: 13px;
+    }
+
+    &--head {
+      width: 700px;
+
+      @include mobile {
+        width: 260px;
+      }
+    }
+  }
+
+  &__wrap-textarea-positioner {
+    display: flex;
+
+    @include tablet {
+      width: 668px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0;
+
+    &--radio {
+      padding-top: 75px;
+    }
+
+    &--checkbox {
+      padding-top: 75px;
+    }
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    position: relative;
+    color: #000000;
+    font-size: 19px;
+    display: flex;
+    align-items: flex-start;
+    width: 440px;
+    padding-left: 82px;
+    margin: 30px 0;
+
+    @include mobile {
+      width: 200px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid #444444;
+      left: 0;
+      top: -9px;
+    }
+
+    &:hover:before {
+      border-color: #63d1bb;
+    }
+
+  }
+
+  &__radio:checked + span::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 12px;
+    top: 3px;
+    background-color: #63d1bb;
+    border-radius: 50%;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__label-checkbox {
+    position: relative;
+    color: #000000;
+    line-height: 18px;
+    font-size: 19px;
+    display: flex;
+    align-items: flex-start;
+    width: 150px;
+    margin: 30px 0;
+    padding-left: 62px;
+
+    &:hover:before {
+      border-color: #63d1bb;
+    }
+  }
+
+  &__filter--checkbox &__label {
+    height: 35px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+
+  }
+
+  &__checkbox + span::before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 35px;
+    border: 2px solid #444444;
+    left: 0;
+    top: -11px;
+  }
+
+  &__checkbox:checked + span::after {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 30px;
+    left: 10px;
+    top: -9px;
+    background: url("../images/png_sprite/check.png") no-repeat 50% 50%;
+  }
+
+  &__wrap-input {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      width: 500px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 260px;
+    }
+
+  }
+
+  &__label-name {
+    position: relative;
+    color: #000000;
+    font-size: 19px;
+    display: flex;
+    align-items: flex-start;
+    width: inherit;
+
+    @include tablet {
+      width: 500px;
+
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text-name {
+    font-family: "OpenSansRegular", sans-serif;
+    border: none;
+    position: relative;
+    border-bottom: 2px solid #000000;
+    height: 30px;
+    width: inherit;
+    font-size: 19px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    color: #444444;
+
+    @include mobile {
+      margin-top: 20px;
+      width: auto;
+    }
+
+    &:hover {
+      border-color: #62d1ba;
+    }
+  }
+
+  &__positioner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__criterion {
+    position: relative;
+    font-size: 17px;
+    line-height: 16px;
+    color: #63d1bb;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    width: 175px;
+    text-align: center;
+    margin-bottom: 35px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  &__input--phone {
+
+    @include mobile {
+      width: 220px;
+    }
+
+    @include tablet {
+      width: 670px;
+    }
+  }
+
+  &__input--phone {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-phone);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+
+  input[placeholder] {
+    padding-left: 20px;
+    padding-bottom: 7px;
+  }
+
+  &__input {
+    font-family: "OpenSansRegular", sans-serif;
+    border: none;
+    width: 680px;
+    position: relative;
+    border-bottom: 2px solid #000000;
+    height: 38px;
+    margin-bottom: 22px;
+    font-size: 19px;
+    flex-grow: 1;
+    color: #444444;
+    margin-right: 2px;
+    background: #f1f1f1;
+
+    &:hover {
+      border-bottom: 2px solid #63d1bb;
+    }
+
+    @include mobile {
+      width: 260px;
+    }
+
+    @include tablet {
+      width: 670px;
+    }
+  }
+
+  &__input--email {
+
+    @include mobile {
+      width: 260px;
+    }
+
+    @include tablet {
+      width: 670px;
+    }
+  }
+
+  &__wrap-input--email {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-email);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+  &__textarea {
+    font-family: "OpenSansRegular", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    border: 2px solid black;
+    height: 118px;
+    width: 680px;
+    padding: 11px;
+    color: #444444;
+
+    @include tablet {
+      width: 510px;
+    }
+
+    @include mobile {
+      width: 234px;
+    }
+
+
+    &:hover {
+      border-color: #63d1bb;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+    padding: 17px 30px;
+  }
+
+  &__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      padding-left: 0;
+      margin-top: 30px;
+    }
+  }
+
+
+  &__label-input--phone{
+    position: relative;
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-phone);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+
+  &__label-input--email{
+    position: relative;
+    &:after {
+      position: absolute;
+      @include png-sprite($icon-email);
+      content: "";
+      right: 0;
+
+      @include mobile {
+        top: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

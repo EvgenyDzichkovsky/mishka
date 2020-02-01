@@ -7,7 +7,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Mishka</title>
 	<link rel="stylesheet" href="styles/style.css">
-	<!--	<link rel="stylesheet" href="styles/slick.css">-->
 </head>
 <body>
 <header>
@@ -18,13 +17,13 @@
 		<div class="container">
 			<div class="navigation__wrapper">
 				<div class="navigation__group hide-tablet">
-					<a href="#"
+					<a href="catalog.html"
 					   class="navigation__link navigation__link--mobile navigation__link--pr-35 navigation__link--br">Каталог
 						товаров</a>
-					<a href="#" class="navigation__link navigation__link--mobile navigation__link--pl-35">Вязание на
+					<a href="form.html" class="navigation__link navigation__link--mobile navigation__link--pl-35">Вязание на
 						заказ</a>
 				</div>
-				<a href="#" class="navigation__link navigation__link--logo">Логотип</a>
+				<a href="/" class="navigation__link navigation__link--logo">Логотип</a>
 				<div class="navigation__group">
 					<a href="#" class="navigation__link navigation__link--mobile navigation__link--search">Поиск по
 						сайту</a>
@@ -34,14 +33,16 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-		<nav class="sub-navigation">
-			<a href="#" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог товаров</a>
-			<a href="#" class="sub-navigation__link show-tablet">Вязание на заказ</a>
-			<a href="#" class="sub-navigation__link sub-navigation__link--pr-60 hide-tablet">Новые постулпения</a>
-			<a href="#" class="sub-navigation__link hide-tablet">Распродажа</a>
-			<span class="sub-navigation__info">Бесплатная доставка по России</span>
-		</nav>
+	<div class="sub-navigation__wrapper--f9f9f9">
+		<div class="container">
+			<nav class="sub-navigation">
+				<a href="#" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог товаров</a>
+				<a href="form.html" class="sub-navigation__link show-tablet">Вязание на заказ</a>
+				<a href="#" class="sub-navigation__link sub-navigation__link--pr-60 hide-tablet">Новые постулпения</a>
+				<a href="#" class="sub-navigation__link hide-tablet">Распродажа</a>
+				<span class="sub-navigation__info">Бесплатная доставка по России</span>
+			</nav>
+		</div>
 	</div>
 </header>
 
@@ -90,7 +91,7 @@
 						</div>
 						<p class="product__price">Цена: <span>990 руб.</span></p>
 						<form class="product__form">
-							<input class="product__btn btn" type="button" value="заказать">
+							<input class="product__btn btn open-modal" type="button" value="заказать">
 						</form>
 					</div>
 
@@ -196,8 +197,28 @@
 		</div>
 	</div>
 </footer>
+<div class="modal">
+	<div class="modal__wrp">
+		<button class="modal__close" type="button" title="Закрыть">закрыть</button>
+		<form class="modal__form" action="#" method="post">
+			<h2>Добавить в корзину</h2>
+			<p>Выберите размер:</p>
+			<div class="modal__choice">
+				<input type="radio" class="modal__radio" checked="" value="s" name="size" id="size-s">
+				<label class="modal__label" for="size-s">S</label>
+				<input type="radio" class="modal__radio" value="m" name="size" id="size-m">
+				<label class="modal__label" for="size-m">M</label>
+				<input type="radio" class="modal__radio" value="l" name="size" id="size-l">
+				<label class="modal__label" for="size-l">L</label>
+			</div>
+			<button class="modal__button btn" type="submit">Добавить</button>
+		</form>
+	</div>
+</div>
+<div class="modal__overlay"></div>
 <script type="text/javascript" src="/js/libraries.js"></script>
 <script type="text/javascript" src="/js/libs/slick.min.js"></script>
+<script type="text/javascript" src="/js/modal.js"></script>
 <script src="js/js.js"></script>
 </body>
 </html>

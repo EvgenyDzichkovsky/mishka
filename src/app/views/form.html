@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mishka</title>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<header>
+		<nav class="navigation navigation--closed navigation--nojs">
+			<button class="navigation__toggle" type="button">
+				<span class="visually-hidden">Открыть меню</span>
+			</button>
+			<div class="container">
+				<div class="navigation__wrapper">
+					<div class="navigation__group hide-tablet">
+						<a href="catalog.html"
+						   class="navigation__link navigation__link--mobile navigation__link--pr-35 navigation__link--br">Каталог
+							товаров</a>
+						<a href="#" class="navigation__link navigation__link--mobile navigation__link--pl-35">Вязание на
+							заказ</a>
+					</div>
+					<a href="/" class="navigation__link navigation__link--logo">Логотип</a>
+					<div class="navigation__group">
+						<a href="#" class="navigation__link navigation__link--mobile navigation__link--search">Поиск по
+							сайту</a>
+						<a href="#" class="navigation__link navigation__link--mobile navigation__link--basket">Корзина:
+							<span>пока пуста</span></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="sub-navigation__wrapper--f1f1f1">
+			<div class="container">
+				<nav class="sub-navigation">
+					<a href="catalog.html" class="sub-navigation__link show-tablet sub-navigation__link--pr-60">Каталог
+						товаров</a>
+					<a href="#" class="sub-navigation__link show-tablet">Вязание на заказ</a>
+					<a href="#" class="sub-navigation__link sub-navigation__link--pr-60 hide-tablet">Новые
+						постулпения</a>
+					<a href="#" class="sub-navigation__link hide-tablet">Распродажа</a>
+					<span class="sub-navigation__info">Бесплатная доставка по России</span>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<section class="form">
+		<div class="container section">
+			<h2 class="section__text">Вязание на заказ</h2>
+		</div>
+		<div class="form__content">
+			<div class="form__content-wrap">
+				<p class="form__description form__description--head">Мы будем рады воплотить в жизнь ваши пожелания!
+					Заполните простую форму заказа и мы свяжемся с вами,
+					чтобы уточнить детали.</p>
+			</div>
+			<form method="post" action="#">
+				<div class="form__filter form__filter--radio">
+					<div class="container">
+						<div class="form__positioner">
+							<span class="form__criterion">Тип</span>
+							<div class="form__wrap-input">
+
+								<label class="form__label">
+									<input class="form__radio" type="radio" name="radio" checked>
+									<span class="form__text">Аксессуар для интерьера</span>
+								</label>
+
+								<label class="form__label">
+									<input class="form__radio" type="radio" name="radio">
+									<span class="form__text">Детская игрушка</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__filter form__filter--checkbox bg-f1f1f1">
+					<div class="container">
+						<div class="form__positioner">
+							<span class="form__criterion">Цвет</span>
+							<div class="form__wrap-input form__wrap-input--wider">
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-1" value="white"
+										   checked="">
+									<span class="form__text">Белый</span>
+								</label>
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-2" value="grey"
+										   checked="">
+									<span class="form__text">Серый</span>
+								</label>
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-3" value="tiffany">
+									<span class="form__text">«Тиффани»</span>
+								</label>
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-4" value="black">
+									<span class="form__text">Черный</span>
+								</label>
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-5" value="pink">
+									<span class="form__text">Розовый</span>
+								</label>
+
+								<label class="form__label-checkbox">
+									<input class="form__checkbox" type="checkbox" name="checkbox-6" value="orange">
+									<span class="form__text">Оранжевый</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__filter form__filter--name">
+					<div class="container">
+						<div class="form__positioner">
+							<span class="form__criterion">ФИО</span>
+							<div class="form__wrap-input">
+								<label class="form__label-name">Имя:
+									<input class="form__text-name" type="text" name="user-name"
+										   placeholder="Введите ваше имя*" required="">
+								</label>
+								<label class="form__label-name">Фамилия:
+									<input class="form__text-name" type="text" name="user-surname"
+										   placeholder="Укажите фамилию*" required="">
+								</label>
+
+								<label class="form__label-name">Отчество:
+									<input class="form__text-name" type="text" name="user-patronymic"
+										   placeholder="Отчество, если желаете">
+								</label>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="form__filter form__filter--checkbox bg-f1f1f1">
+					<div class="container">
+						<div class="form__positioner">
+							<span class="form__criterion">Тел</span>
+							<label class="form__label-input form__label-input--phone">
+								<input class="form__input form__input--phone" type="tel" name="tel"
+									   placeholder="+7 XXX XX XX*" required="">
+							</label>
+						</div>
+						<div class="form__positioner">
+							<span class="form__criterion">E-mai</span>
+							<label class="form__label-input form__label-input--email">
+								<input class="form__input form__input--email" type="email" name="email"
+									   placeholder="Ваш Email*" required="">
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__filter form__filter--name">
+					<div class="container">
+						<div class="form__positioner">
+							<span class="form__criterion">Доп</span>
+							<div class="form__wrap-textarea">
+								<label class="visually-hidden" for="wish"></label>
+								<textarea placeholder="Опишите все ваши пожелания к заказу" class="form__textarea"
+										  name="wishes" id="wish"></textarea>
+								<div class="form__btn-wrap">
+									<p class="form__description">
+										<sup>*</sup>Поля обязательны для заполнения
+									</p>
+									<button class="form__button btn" type="submit">Отправить заказ</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrap">
+				<a href="#" class="footer__link--logo">Логотип</a>
+				<div class="footer__item">
+					<a class="footer__social-link footer__social-link--instagram" href="#">инстаграм</a>
+					<a class="footer__social-link footer__social-link--facebook" href="#">фейсбук</a>
+					<a class="footer__social-link footer__social-link--twitter" href="#">твитер</a>
+				</div>
+				<div class="footer__developer">
+					<p>Разрабатано</p><a href="#">htmlacademy</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="/js/libraries.js"></script>
+<script type="text/javascript" src="/js/libs/slick.min.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>
